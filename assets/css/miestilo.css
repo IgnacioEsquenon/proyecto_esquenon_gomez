@@ -1,6 +1,7 @@
 body {
-background-color: #F5F5F5;
-font-style: italic;  
+background-color:#8b8f94 !important;
+font-style: italic;   
+
 } 
 
 .logo_nav{
@@ -10,7 +11,7 @@ font-style: italic;
 }
 
 .navbar{
-    background-color: #1b9146; 
+    background: linear-gradient(180deg, #1c9458, #3eb66c);  
     --bs-navbar-padding-y: 0rem;
 }
 
@@ -81,3 +82,10 @@ button:hover{
     background-color: #34D399;
 } 
 
+.footer{
+background-color:#202124;
+} 
+
+.text-footer{
+    color: aliceblue;
+}

@@ -1,3 +1,21 @@
 Estado Inicial del Proyecto
 Sin cambios desde la última clase
-Prueba de cambio sábado 12/04
+Prueba de cambio sábado 12/04 
+
+
+--Cambios Sabado 12/04 - Hecho por Sebastian Gomez-- 
+
+Bueno toque bastante la verdad asi que vamos por partes 
+
+*Primero en el .env y en el App.php tuve que cambiar el link del local host y agregarle el -1, sino no me dejaba cambiar nada (cualquier cosa cuando terminemos maso el trabajo arreglamos el nombre total las rutas no se modifican) 
+
+*Segundo, agregue las rutas para la pagina principal y las que realize hoy, tenes como ejemplo como agregue las rutas pero basicamente es, primero en el Home.php creas la funcion donde se va a visualizar la ventana(header-ventana nueva-footer), despues en Routes.php agregas la ruta, de forma tal que lo primero seria el nombre de la ruta y lo segundo es el nombre de la funcion (no le probe usar sin el home si queres probale sino despues vemos), y por ultimo en el href del header le agregas el enlace y solamente en vez de todo el PATH usas el nombre de la ruta que creaste antes 
+(No se si explique bien pero seguro le agarras la mano :)  
+
+*Tercero, toque el color de la barra de navegacion y le puse un degradado, igual que con el fondo que le puse un gris ya que el blanco me encandilaba los ojos honestamente (despues si tenemos tiempo vemos como cambiar temas y eso) 
+
+*Cuarto y ultimo, las paginas Quienes Somos y Terminos y Condiciones ya estan hechas, mas alla de algun que otro retoque que despues se me ocurra (Lo de si es responsive o no despues lo vemos, cuando tengamos todo hecho) pero la base ya esta hecha. 
+
+Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que leas esto como para no complicarnos mucho xd 
+
+--Fin de los cambios 12/04 --

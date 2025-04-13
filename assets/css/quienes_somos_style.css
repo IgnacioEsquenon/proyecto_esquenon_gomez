@@ -1,0 +1,21 @@
+#quienes-somos {
+    background: linear-gradient(180deg, #44ffa2, #5a5b5e); 
+    padding-top: 0rem;
+    padding-bottom: 3rem; 
+    min-height: 100vh;
+} 
+
+.qs-list{
+    color: #505050; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: medium; 
+    text-align: center;
+} 
+
+.cont-trayectoria{
+    background: linear-gradient(180deg, #6c6c6d, #202020 ); 
+} 
+
+p{
+    color: aliceblue;
+}

@@ -1,4 +1,5 @@
-<footer class="bg-body-tertiary text-center">
+
+<footer class="footer text-center">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
@@ -67,9 +68,12 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+  <div class="text-center p-3 text-footer" style="background-color: rgba(0, 0, 0, 0.05);">
     © Copyright 2025 - Todos los derechos reservados.
-    <a class="text-body" href="#">Plugit.com</a>
+    <a class="text-footer" href="#">Plugit.com</a>
   </div>
   <!-- Copyright -->
 </footer>
+<script src=<?php echo base_url('assets/js/bootstrap.bundle.min.js')?>> </script> 
+
+</html>

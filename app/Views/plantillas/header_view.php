@@ -9,7 +9,7 @@
     <link rel="stylesheet" href=<?php echo base_url('assets/css/miestilo.css')?>>
     <link href="<?= base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
   </head>
-  <body> 
+  <body class ="bg-secondary"> 
   <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src=<?php echo base_url("assets/img/logo_pag.png")?> alt="logo" class="logo_nav"></a>
@@ -19,10 +19,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"> <i class="fa fa-home"></i> Inicio</a>
+          <a class="nav-link active" aria-current="page" href=<?php echo base_url("principal")?>> <i class="fa fa-home"></i> Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"> <i class="fa fa-address-card"></i> Nosotros</a>
+          <a class="nav-link" href=<?php echo base_url("quienes_somos")?>> <i class="fa fa-address-card"></i> Nosotros</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,7 +42,7 @@
           <a class="nav-link" href="#"><i class="fa fa-credit-card-alt"></i>Comercialización</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"> <i class="fa fa-exclamation-circle"></i> Terminos y Condiciones</a>
+          <a class="nav-link" href=<?php echo base_url("terminos_y_condiciones")?>> <i class="fa fa-exclamation-circle"></i> Terminos y Condiciones</a>
         </li> 
         <li class="nav-item">
           <a class="nav-link" href="#"> <i class="fa fa-phone"></i> Contacto</a>
@@ -54,4 +54,3 @@
     </div>
   </div>
 </nav> 
-<br>

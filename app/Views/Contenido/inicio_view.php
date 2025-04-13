@@ -1,6 +1,5 @@
 <div class="container">
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illo velit deserunt sed optio expedita quam reiciendis molestias, iste error! Impedit magni ex, eos quae molestias iste odit veritatis quidem.</p> 
-    
 </div> 
 <div id="carouselExampleControls" class="carousel slide justify-content-center" data-bs-ride="carousel">
   <div class="carousel-inner">
