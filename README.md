@@ -19,3 +19,11 @@ Bueno toque bastante la verdad asi que vamos por partes
 Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que leas esto como para no complicarnos mucho xd 
 
 --Fin de los cambios 12/04 --
+
+--Cambios Lunes 14/04 - Hecho por Ignacio Esquenón--
+
+1- No entendí bien el problema que te hizo agregarle un "-1" a la ruta, cuando cargué la página no entraba a los links de las otras páginas, y no cargaba las imágenes tampoco, entonces tuve que revertirlo, y ahí ya pude ver todo normal.
+2- Agregué las rutas para comercialización y contacto en "Routes.php", y sus respectivas funciones en "Home.php", haciendo funcionales también los links de la navbar.
+3- Más o menos quedó completada la sección de comercialización, con su respectiva hoja de diseño css, yo creo que igual eventualmente tendríamos que ver para agregar más detalles, o funcionalidades del bootstrap como el carrusel, pero la verdad me cuesta ver dónde colocar todas esas boludeces. Me falta completar contacto todavía, pero seguro lo termino haciendo igual o parecido no sé.
+
+--Fin de los cambios 14/04 --

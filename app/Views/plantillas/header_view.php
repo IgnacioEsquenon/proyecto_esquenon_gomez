@@ -39,13 +39,13 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa fa-credit-card-alt"></i>Comercialización</a>
+          <a class="nav-link" href=<?php echo base_url("comercializacion")?>><i class="fa fa-credit-card-alt"></i>Comercialización</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href=<?php echo base_url("terminos_y_condiciones")?>> <i class="fa fa-exclamation-circle"></i> Terminos y Condiciones</a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" href="#"> <i class="fa fa-phone"></i> Contacto</a>
+          <a class="nav-link" href=<?php echo base_url("contacto")?>> <i class="fa fa-phone"></i> Contacto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"> <i class="fa fa-shopping-basket"></i> Tienda</a>

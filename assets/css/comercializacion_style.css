@@ -1,0 +1,71 @@
+/* --- Estilos Base --- */
+.comercializacion{
+    background-color: #1f1f1f;
+    padding-left: 15%;
+    padding-top: 1%;
+    padding-right: 15%;
+    padding-bottom: 3%;
+}
+
+/* --- Títulos --- */
+.Titulo{
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
+}
+
+.titulo-seccion{
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #44ffa2;
+}
+
+.titulo-item {
+    color: #44ffa2;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Listas Principales --- */
+.lista-contenido{
+    display: inline;
+}
+
+.item-principal {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Items y Subitems --- */
+
+.descripcion-item {
+    color: #dfdfdf;
+    margin-left: 0.5rem;
+    display: block;
+}
+
+.sub-lista {
+    margin: 0.5rem 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.sub-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: #c0c0c0;
+}
+
+.sub-item:before {
+    content: "•";
+    color: #44ffa2;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
