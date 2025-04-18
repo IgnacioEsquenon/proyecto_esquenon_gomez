@@ -6,6 +6,7 @@ class Home extends BaseController
 {
     public function Principal(): string
     {
+        $data["titulo"]="Inicio";
         return view('plantillas/header_view.php').view('Contenido/inicio_view.php').view('plantillas/footer_view.php');
     } 
 

@@ -26,4 +26,13 @@ Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que l
 2- Agregué las rutas para comercialización y contacto en "Routes.php", y sus respectivas funciones en "Home.php", haciendo funcionales también los links de la navbar.
 3- Más o menos quedó completada la sección de comercialización, con su respectiva hoja de diseño css, yo creo que igual eventualmente tendríamos que ver para agregar más detalles, o funcionalidades del bootstrap como el carrusel, pero la verdad me cuesta ver dónde colocar todas esas boludeces. Me falta completar contacto todavía, pero seguro lo termino haciendo igual o parecido no sé.
 
---Fin de los cambios 14/04 --
+--Fin de los cambios 14/04 -- 
+
+--Cambios 18/04 - Sebastian Gomez -- 
+
+1- Termine la pagina de inicio, sujeta a cambios si se nos ocurre algo mas
+2- Agregue animaciones a la barra de navegacion, todo lo que sea despues hacer responsive lo vemos cuando terminemos todo 
+3- Agregue las opciones de Registrarse e iniciar sesion a la barra de navegacion. No se si esas las completas vos o como hacemos, cualquier cosa avisame. 
+4- Borre la opcion de tienda, porque creo que por ahora esta de mas realmente, capaz a futuro le añadimos despues si es necesario.
+
+--Fin cambios 18/04 -- 

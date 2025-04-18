@@ -12,21 +12,21 @@
   <body class ="bg-secondary"> 
   <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src=<?php echo base_url("assets/img/logo_pag.png")?> alt="logo" class="logo_nav"></a>
+    <a class="navbar-brand" href=<?php echo base_url("principal")?>><img src=<?php echo base_url("assets/img/logo_pag.png")?> alt="logo" class="logo_nav"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-icons">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href=<?php echo base_url("principal")?>> <i class="fa fa-home"></i> Inicio</a>
+          <a class="nav-link active" aria-current="page" href=<?php echo base_url("principal")?>> <i class="fa fa-home"></i><span class ="nav-text">Inicio</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=<?php echo base_url("quienes_somos")?>> <i class="fa fa-address-card"></i> Nosotros</a>
+          <a class="nav-link" href=<?php echo base_url("quienes_somos")?>> <i class="fa fa-address-card"></i><span class ="nav-text"> Nosotros </span></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-shopping-cart"></i>Catalogo
+          <i class="fa fa-shopping-cart"></i><span class ="nav-text"> Catalogo</span>
           </a>
           <ul class="dropdown-menu bg-secondary bg-gradient"> 
             <p class="tit-dropmenu">Busca por Dispositivo</p>
@@ -39,18 +39,24 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=<?php echo base_url("comercializacion")?>><i class="fa fa-credit-card-alt"></i>Comercialización</a>
+          <a class="nav-link" href=<?php echo base_url("comercializacion")?>><i class="fa fa-credit-card-alt"></i> <span class ="nav-text">Comercialización </span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=<?php echo base_url("terminos_y_condiciones")?>> <i class="fa fa-exclamation-circle"></i> Terminos y Condiciones</a>
+          <a class="nav-link" href=<?php echo base_url("terminos_y_condiciones")?>> <i class="fa fa-exclamation-circle"></i> <span class ="nav-text">Terminos y Condiciones</span></a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" href=<?php echo base_url("contacto")?>> <i class="fa fa-phone"></i> Contacto</a>
+          <a class="nav-link" href=<?php echo base_url("contacto")?>> <i class="fa fa-phone"></i><span class ="nav-text"> Contacto </span></a>
+        </li>
+      </ul> 
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
+        <li class="nav-item nav-user">
+          <a class="nav-link" href="#"><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"> <i class="fa fa-shopping-basket"></i> Tienda</a>
+          <a class="nav-link" href="#"><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
         </li>
       </ul>
     </div>
   </div>
 </nav> 
+

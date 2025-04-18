@@ -6,8 +6,7 @@ font-style: italic;
 
 .logo_nav{
     height: 50px;
-    width: 100%; 
-    margin-left: 0%;
+    width: 100%;  
 }
 
 .navbar{
@@ -59,17 +58,18 @@ font-weight: bold;
 }
 
 .carousel.slide{ 
-    max-width: 70%; 
+    max-width: 100%; 
     display: flex;
     justify-content: center; 
     align-items: center; 
-    margin-left: 15%;
-}
+    margin-left: 0%; 
+    max-height: 80%; 
+} 
 
 .img-slide{
     align-items: center;
     width: 100%;
-    height: 400px;
+    height: 70vh !important;
 }
 .boton{
     background-color: green; 
@@ -80,7 +80,57 @@ font-weight: bold;
 
 button:hover{
     background-color: #34D399;
-} 
+}  
+
+/*Efectos barra navegacion*/
+
+.nav-icons .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(2, 2, 2);
+    transition: all 0.3s ease;
+    padding: 10px 12px;
+    position: relative;
+  }
+  
+  .nav-icons .nav-link i {
+    font-size: 20px;
+    transition: font-size 0.3s ease, margin-right 0.3s ease;
+  }
+  
+  .nav-icons .nav-text {
+    max-width: 0;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: max-width 0.3s ease, opacity 0.3s ease, margin-left 0.3s ease;
+    margin-left: 0;
+  }
+  
+  /* Efecto al pasar el mouse */
+  .nav-icons .nav-link:hover i {
+    font-size: 24px;
+    margin-right: 8px; 
+    color: #318CE7;
+  }
+  
+  .nav-icons .nav-link:hover .nav-text {
+    max-width: 150px;
+    opacity: 1;
+    margin-left: 8px; 
+    color: #318CE7;
+  } 
+
+   .nav-user .nav-user-ini:hover{
+    color: #31e7e7;
+  } 
+
+  .nav-user-reg:hover{
+    color: #5c65e4;
+  }
+  
+/* Fin - Efectos de la barra de navegacion*/
 
 .footer{
 background-color:#202124;
@@ -89,3 +139,57 @@ background-color:#202124;
 .text-footer{
     color: aliceblue;
 }
+
+.card{
+    margin: 15px;
+}
+
+.card-body{
+    color: #202124; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:lighter; 
+    font-style:normal
+} 
+
+
+.img-size{
+    width: 100%; 
+    height: 230px;
+    border-radius: 10px; 
+}
+
+/*Efectos cartas*/ 
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 10px 20px rgba(4, 8, 255, 0.2);
+  }
+
+  .card-img-top {
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+
+  .backgroundEffect {
+    background: linear-gradient(145deg, #e0f7e9, #ffffff);
+    border: none;
+  }
+
+  .backgroundEffect:hover {
+    background: linear-gradient(145deg, #68ff03, #e0f7e9);
+  }
+
+  .card .btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .card .btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
