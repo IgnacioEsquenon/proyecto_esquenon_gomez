@@ -36,3 +36,9 @@ Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que l
 4- Borre la opcion de tienda, porque creo que por ahora esta de mas realmente, capaz a futuro le añadimos despues si es necesario.
 
 --Fin cambios 18/04 -- 
+
+--Cambios 21/04 - Ignacio Esquenón -- 
+
+1- Quedó la página de contacto con el formulario y su hoja de diseño.
+
+--Fin cambios 21/04 -- 

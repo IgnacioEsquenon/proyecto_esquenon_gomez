@@ -1,0 +1,103 @@
+/* --- Estilos Base --- */
+.contacto{
+    background-color: #1f1f1f;
+    padding-left: 15%;
+    padding-top: 1%;
+    padding-right: 15%;
+    padding-bottom: 3%;
+}
+
+/* --- Títulos --- */
+.Titulo{
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #000000;
+}
+
+.titulo-seccion{
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #44ffa2;
+}
+
+/* --- Items y Subitems --- */
+
+.descripcion-item {
+    color: #ffffff;
+    margin-left: 0.5rem;
+    display: block;
+}
+
+form {
+    background-color: #808080;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 10px rgba(0, 90, 156, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  form label {
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+    color: #000000;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="file"],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border: 1px solid #bcd9f5;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  form input:focus,
+  form select:focus,
+  form textarea:focus {
+    border-color: #33ff58;
+    outline: none;
+  }
+  
+  form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  form input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  form input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #00ff80;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #10cd2c;
+  }
+  
+  form .form-group {
+    margin-bottom: 15px;
+  }
