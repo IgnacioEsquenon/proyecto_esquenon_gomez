@@ -1,4 +1,4 @@
-<section class="contacto">
+<section class="contacto fade-scroll">
     <link rel="stylesheet" href=<?php echo base_url('assets/css/contacto_style.css')?>>
 
     <div>

@@ -1,4 +1,4 @@
-<section class="comercializacion">
+<section class="comercializacion fade-scroll">
     <link rel="stylesheet" href=<?php echo base_url('assets/css/comercializacion_style.css')?>>
     <h2 class="Titulo">Comercialización</h2>
 

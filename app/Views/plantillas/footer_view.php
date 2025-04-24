@@ -76,4 +76,24 @@
 </footer>
 <script src=<?php echo base_url('assets/js/bootstrap.bundle.min.js')?>> </script> 
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+
 </html>

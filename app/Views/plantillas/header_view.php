@@ -18,13 +18,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-icons">
-        <li class="nav-item">
+        <li class="nav-item rounded-pill">
           <a class="nav-link active" aria-current="page" href=<?php echo base_url("principal")?>> <i class="fa fa-home"></i><span class ="nav-text">Inicio</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item rounded-pill">
           <a class="nav-link" href=<?php echo base_url("quienes_somos")?>> <i class="fa fa-address-card"></i><span class ="nav-text"> Nosotros </span></a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown rounded-pill">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa fa-shopping-cart"></i><span class ="nav-text"> Catalogo</span>
           </a>
@@ -38,21 +38,21 @@
             <li><a class="dropdown-item" href="#"> <i class="fa fa-gamepad"></i> Gaming</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <li class="nav-item rounded-pill">
           <a class="nav-link" href=<?php echo base_url("comercializacion")?>><i class="fa fa-credit-card-alt"></i> <span class ="nav-text">Comercialización </span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item rounded-pill ">
           <a class="nav-link" href=<?php echo base_url("terminos_y_condiciones")?>> <i class="fa fa-exclamation-circle"></i> <span class ="nav-text">Terminos y Condiciones</span></a>
         </li> 
-        <li class="nav-item">
+        <li class="nav-item rounded-pill">
           <a class="nav-link" href=<?php echo base_url("contacto")?>> <i class="fa fa-phone"></i><span class ="nav-text"> Contacto </span></a>
         </li>
       </ul> 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
-        <li class="nav-item nav-user">
-          <a class="nav-link" href="#"><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
+        <li class="nav-item nav-user rounded-pill">
+          <a class="nav-link " href="#"><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item rounded-pill">
           <a class="nav-link" href="#"><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
         </li>
       </ul>

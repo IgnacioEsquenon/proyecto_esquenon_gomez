@@ -1,6 +1,6 @@
 <link rel="stylesheet" href=<?php echo base_url('assets/css/quienes_somos_style.css')?>>
 
-<section class="py-5 align-items-center seccion-1" id="quienes-somos">
+<section class="py-5 align-items-center seccion-1 fade-scroll" id="quienes-somos">
   <div class="container">
     <div class="row align-items-center">
       
@@ -26,7 +26,7 @@
     </div>
   </div>  
 
-  <section class="py-5 seccion-2 " id="fundadores">
+  <section class="py-5 seccion-2 fade-scroll" id="fundadores">
   <div class="container">
     <h2 class="text-center mb-4">Nuestros Fundadores</h2>
     <div class="row justify-content-start">
@@ -54,7 +54,7 @@
 </section>
 
 
-  <section class="py-5 seccion-1" id="trayectoria">
+  <section class="py-5 seccion-1 fade-scroll" id="trayectoria">
   <div class="container">
     <h2 class="text-center mb-5">Nuestra Trayectoria</h2>
     <div class="row g-4">
@@ -103,19 +103,35 @@
 </section>
 
 
-  <div class="mt-5 text-center seccion-2">
-  <h5 class="mb-3">¿Dónde estamos?</h5>
-  <div class="mx-auto shadow rounded overflow-hidden" style="max-width: 700px;">
-    <div class="ratio ratio-16x9">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13130.819878697583!2d-58.38754669229444!3d-34.60373437491501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccadc5e14fc6d%3A0x4df7ba75fa2378c1!2sObelisco!5e0!3m2!1ses-419!2sar!4v1687812098821!5m2!1ses-419!2sar"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+<div class="mt-5 seccion-2 fade-scroll">
+  <h5 class="text-center mb-4">¿Dónde estamos?</h5>
+
+  <div class="d-flex flex-column flex-md-row justify-content-center align-items-start gap-4">
+    
+    <div style="flex: 1; min-width: 300px; max-width: 600px;">
+      <div class="ratio ratio-16x9 shadow rounded ms-5">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.5644776791911!2d-58.449182360160094!3d-34.5470247312114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb430806c67dd%3A0xcb0f585d6e33954d!2sAv.%20Pres.%20Figueroa%20Alcorta%207550%2C%20C1428%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1745337293076!5m2!1ses!2sar"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="text-md-start text-center ms-5" style="flex: 1;">
+      <h6 class="mb-2">Horarios de Atención</h6>
+      <p class="mb-1">🕒 Lunes a Sábado</p>
+      <p>8:30 a 12:30 - 17:00 a 20:30</p> 
+      <p> Av. Pres. Figueroa Alcorta 7550, C1428 Cdad. Autónoma de Buenos Aires</p>
     </div>
   </div>
 </div>
+
+</div>
+
 
 </section>

@@ -1,5 +1,5 @@
 
-
+<section class="carrusel fade-scroll">
 <div id="carouselExampleControls" class="carousel slide justify-content-center" data-bs-ride="carousel">
 <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -34,10 +34,10 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div> 
+</section>
 
-<br>
 
-<section class="Destacados py-5 bg-secondary"> 
+<section class="destacados py-5 fade-scroll"> 
 
 <h2 class="text-center">Productos Destacados</h2>
 <div class="card-group">
@@ -82,9 +82,7 @@
     </div>
 </section>
 
-<br> 
-
-<section class="py-5 bg-light">
+<section class="py-5 bg-light fade-scroll">
   <div class="container">
     <h3 class="text-center mb-5">Explorá por categoría</h3>
     <div class="row g-4">
@@ -142,6 +140,20 @@
     </div>
   </div>
 </section>
+
+<section class="newsletter-section py-5 fade-scroll">
+  <div class="container text-center text-black">
+    <h2 class="mb-3">Suscribite a nuestras novedades</h2>
+    <p class="mb-4">Enterate antes que nadie de nuevas promos, lanzamientos y descuentos exclusivos.</p>
+    <form class="newsletter-form d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+      <input type="email" class="form-control" placeholder="Ingresá tu correo" required>
+      <button type="submit" class="btn btn-success">Suscribirme</button>
+    </form>
+  </div>
+</section>
+
+
+
 
 
 

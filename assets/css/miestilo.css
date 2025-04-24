@@ -1,8 +1,9 @@
 body {
 background-color:#8b8f94 !important;
 font-style: italic;   
+}
 
-} 
+
 
 .logo_nav{
     height: 50px;
@@ -156,7 +157,13 @@ background-color:#202124;
     width: 100%; 
     height: 230px;
     border-radius: 10px; 
+} 
+
+
+.destacados{
+  background: linear-gradient(180deg, #043575, #ffffff);
 }
+
 
 /*Efectos cartas*/ 
 .card {
@@ -193,3 +200,40 @@ background-color:#202124;
     background-color: #218838;
     transform: scale(1.05);
   }
+
+
+  .newsletter-section {
+    background: linear-gradient(180deg, #ffffff 0%, #757575 90%);
+    color: white;
+  }
+  
+  .newsletter-form input[type="email"] {
+    max-width: 350px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .newsletter-form button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #2ea860;
+  } 
+
+
+  /*Efectos ventana*/
+  .fade-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .fade-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+    
