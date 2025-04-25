@@ -12,3 +12,5 @@ $routes->get('quienes_somos', 'Home::quienes_somos');
 $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('terminos_y_condiciones', 'Home::ter_y_cond');
 $routes->get('contacto', 'Home::contacto');
+$routes->get('inicio_sesion', 'Home::inicio_sesion');
+$routes->get('registro', 'Home::registro');

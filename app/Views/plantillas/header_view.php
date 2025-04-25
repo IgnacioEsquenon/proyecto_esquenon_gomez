@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Plugit v2</title>
+    <title><?php echo $titulo; ?></title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href=<?php echo base_url('assets/css/miestilo.css')?>>
@@ -50,10 +50,10 @@
       </ul> 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
         <li class="nav-item nav-user rounded-pill">
-          <a class="nav-link " href="#"><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
+          <a class="nav-link " href=<?php echo base_url("inicio_sesion")?>><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
         </li>
         <li class="nav-item rounded-pill">
-          <a class="nav-link" href="#"><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
+          <a class="nav-link" href=<?php echo base_url("registro")?>><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
         </li>
       </ul>
     </div>
