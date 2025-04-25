@@ -1,5 +1,6 @@
+<link rel="stylesheet" href="<?php echo base_url('assets/css/registro_style.css') ?>">
+
 <section class="registro fade-scroll">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/registro_style.css') ?>">
     <div>
         <h2 class="titulo-seccion">Formulario de Registro</h2>
         <form action="ruta_al_servidor" method="post">

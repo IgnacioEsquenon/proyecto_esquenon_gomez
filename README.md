@@ -42,3 +42,13 @@ Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que l
 1- Quedó la página de contacto con el formulario y su hoja de diseño.
 
 --Fin cambios 21/04 -- 
+
+--Cambios 25/04 - Ignacio Esquenón -
+
+1- Terminé con las páginas de inicio y registro.
+2- Modifiqué comercialización y contacto para que quede más como nos pidió el profe, una mezcla de toquetear la ia y manipular esos resultados.
+3- Modifiqué la página de términos y condiciones por lo mismo que lo anterior, también creé una hoja de diseño para la misma.
+4- Intenté mantener unificado los diseños más a grandes razgos de todas las páginas que modifiqué, en la estructura de títulos y colores más que nada
+5- También agregué funciones de responsividad a todas esas páginas, hasta donde lo probé anduvo bien pero hay que verificar todo después.
+
+-- Fin Cambios 25/04 -

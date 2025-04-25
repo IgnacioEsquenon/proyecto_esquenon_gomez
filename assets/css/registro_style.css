@@ -3,16 +3,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  background-color: linear-gradient(to right, #25ac00, #2e2e2e);
-  color: #fff;
-  min-height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background-color: #003618;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+
 }
 
 /* Título de la sección */
 .titulo-seccion {
-  color: #44ffa2;
+  color: #ffffff;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   border-bottom: 2px solid #44ffa2;

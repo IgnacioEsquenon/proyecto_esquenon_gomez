@@ -1,7 +1,6 @@
 /* --- Estilos Generales --- */
 .comercializacion {
-    background-color: #b3eacc;
-    padding-left: 0%;
+    background-color: #003618;
     margin: 0 auto;
     max-width: 100%;
     box-sizing: border-box;
@@ -96,20 +95,24 @@
 /* Responsividad general */
 @media (min-width: 768px) {
     .comercializacion {
-        padding: 2rem 3rem;
+        padding-top: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
 @media (min-width: 1024px) {
     .comercializacion {
-        padding: 2rem 5rem;
+        padding-top: 2rem;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 }
 
 @media (min-width: 768px) {
     .lista-contenido {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 }
 
