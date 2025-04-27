@@ -1,9 +1,7 @@
-body {
-background-color:#8b8f94 !important;
+.bg-secondary {
+  background-color: inherit;
 font-style: italic;   
 }
-
-
 
 .logo_nav{
     height: 50px;
@@ -46,7 +44,23 @@ li{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold; 
     font-style: italic; 
-    margin-left: 3%;
+    margin-left: 3%; 
+
+} 
+
+.dropdown-menu {
+  background: linear-gradient(180deg, #1c9458, #3eb66c) !important;  
+  border-style: double;
+} 
+
+.dropdown-item{
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-weight: bold;
+} 
+
+.dropdown-item:hover{
+  background: #31e7e7 !important;
 }
 
 p{
@@ -237,3 +251,20 @@ background-color:#202124;
     transform: translateY(0);
   }
     
+@media (max-width: 768px) {
+  .carousel-item {
+    object-fit: contain;
+    width: auto;
+    height: auto; 
+    object-position: top;
+  }
+}
+  
+/* Media query para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .carousel-inner{
+        height: 150px;
+    }
+  }
+  
+  

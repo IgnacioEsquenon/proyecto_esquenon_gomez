@@ -52,3 +52,6 @@ Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que l
 5- También agregué funciones de responsividad a todas esas páginas, hasta donde lo probé anduvo bien pero hay que verificar todo después.
 
 -- Fin Cambios 25/04 -
+
+-- Cambios 27/04 - 
+Finalizada la pagina del catalogo, cambios en el logo y en el dropmenu, le intente hacer responsive pero faltan unas cositas
