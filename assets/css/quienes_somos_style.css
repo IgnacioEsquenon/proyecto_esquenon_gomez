@@ -18,4 +18,11 @@
 
 p{
     color: aliceblue;
+} 
+
+@media (max-width: 768px) {
+    .list-unstyled{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }

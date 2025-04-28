@@ -10,7 +10,7 @@
         <p>Nos enfocamos en productos prácticos, modernos y duraderos. Nuestra misión es acercarte calidad y estilo al mejor precio.</p>
         <ul class="list-unstyled mt-3">
             <li class="qs-list me-3"><i class="fa fa-truck ms-3 me-3"></i>Envíos a todo el país</li>
-            <li class="qs-list me-1"><i class="fa fa-headset ms-3 me-3"></i><br>
+            <li class="qs-list me-1"><i class="fa fa-headset ms-3 me-3"></i>
             Atención personalizada</li>
             <li class="qs-list me-3"><i class="fa fa-shield-alt ms-3 me-3"></i>Productos testeados y garantizados</li>
             <li class="qs-list me-3"><i class="fa fa-globe ms-3 me-3"></i>Productos Importados</li> 

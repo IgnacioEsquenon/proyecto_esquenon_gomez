@@ -6,7 +6,7 @@
     <div>
         <h2 class="titulo-seccion">1. Datos Legales de la Empresa</h2>
         <ul class="lista-contenido">
-            <li class="item-principal"><strong class="titulo-item">Nombre del titular:</strong><br> Juan Pérez</li>
+            <li class="item-principal"><strong class="titulo-item">Nombre del titular:</strong><br> Gomez Sebastian Exequiel</li>
             <li class="item-principal"><strong class="titulo-item">Razón social:</strong><br> Plugit S.A.</li>
             <li class="item-principal"><strong class="titulo-item">CUIT:</strong><br> 30-12345678-9</li>
             <li class="item-principal"><strong class="titulo-item">Domicilio legal:</strong><br> Av. Rivadavia 2500, Piso 3, CABA, Argentina.</li>
