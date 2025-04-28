@@ -13,6 +13,9 @@
             <label for="contra">Contraseña:</label>
             <input type="password" name="contra" id="contra" required>
 
+            <label for="rcontra">Repetir Contraseña:</label>
+            <input type="password" name="rcontra" id="rcontra" required>
+
             <label for="codPostal">Código Postal:</label>
             <input type="number" name="codPostal" id="codPostal" required>
 

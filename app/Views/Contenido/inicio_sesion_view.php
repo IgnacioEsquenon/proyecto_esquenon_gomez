@@ -1,7 +1,5 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/registro_style.css') ?>">
 
-<link rel="stylesheet" href="<?php echo base_url('assets/css/registro_style.css') ?>">
-
 <section class="registro fade-scroll">
     <div>
         <h2 class="titulo-seccion">Inicio de Sesión</h2>
