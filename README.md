@@ -24,7 +24,7 @@ Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que l
 
 1- No entendí bien el problema que te hizo agregarle un "-1" a la ruta, cuando cargué la página no entraba a los links de las otras páginas, y no cargaba las imágenes tampoco, entonces tuve que revertirlo, y ahí ya pude ver todo normal.
 2- Agregué las rutas para comercialización y contacto en "Routes.php", y sus respectivas funciones en "Home.php", haciendo funcionales también los links de la navbar.
-3- Más o menos quedó completada la sección de comercialización, con su respectiva hoja de diseño css, yo creo que igual eventualmente tendríamos que ver para agregar más detalles, o funcionalidades del bootstrap como el carrusel, pero la verdad me cuesta ver dónde colocar todas esas boludeces. Me falta completar contacto todavía, pero seguro lo termino haciendo igual o parecido no sé.
+3- Más o menos quedó completada la sección de comercialización, con su respectiva hoja de diseño css, yo creo que igual eventualmente tendríamos que ver para agregar más detalles, o funcionalidades del bootstrap como el carrusel. Me falta completar contacto todavía, pero seguro lo termino haciendo igual o parecido no sé.
 
 --Fin de los cambios 14/04 -- 
 
@@ -46,7 +46,7 @@ Eso seria seria todo basicamente, en el commit lo unico que voy a poner es que l
 --Cambios 25/04 - Ignacio Esquenón -
 
 1- Terminé con las páginas de inicio y registro.
-2- Modifiqué comercialización y contacto para que quede más como nos pidió el profe, una mezcla de toquetear la ia y manipular esos resultados.
+2- Modifiqué comercialización y contacto para que quede más como nos pidió el profe.
 3- Modifiqué la página de términos y condiciones por lo mismo que lo anterior, también creé una hoja de diseño para la misma.
 4- Intenté mantener unificado los diseños más a grandes razgos de todas las páginas que modifiqué, en la estructura de títulos y colores más que nada
 5- También agregué funciones de responsividad a todas esas páginas, hasta donde lo probé anduvo bien pero hay que verificar todo después.
