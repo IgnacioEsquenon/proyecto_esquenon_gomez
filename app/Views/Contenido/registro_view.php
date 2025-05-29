@@ -1,31 +1,59 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/registro_style.css') ?>">
 
+
 <section class="registro fade-scroll">
     <div>
         <h2 class="titulo-seccion">Formulario de Registro</h2>
-        <form action="ruta_al_servidor" method="post">
-            <label for="nombre">Nombre de Usuario:</label>
-            <input type="text" name="nombre" id="nombre" required>
+        <?php helper('form'); ?>
+        <?php echo form_open('registro') ?>
+        
+            <div class="form-group mt-2">
+                <label for="Apellido">Apellido</label>
+                <?php echo form_input(['name' => 'apellido', 'id' => 'apellido', 'type' => 'text', 'value' => set_value('apellido')]); ?>
+                 <?php if(isset($validation) && $validation->hasError('apellido')): ?>
+                    <div class="text-danger"><?= $validation->getError('apellido') ?></div>
+                <?php endif; ?>
+            </div>
+            
+            <div class="form-group mt-2">
+                <label for="Nombre">Nombre</label>
+                <?php echo form_input(['name' => 'nombre', 'id' => 'nombre', 'type' => 'text', 'value' => set_value('nombre')]); ?>
+                <?php if(isset($validation) && $validation->hasError('nombre')): ?>
+                    <div class="text-danger"><?= $validation->getError('nombre') ?></div>
+                <?php endif; ?>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
+            <div class="form-group mt-2">
+                <label for="Correo">Correo</label>
+                <?php echo form_input(['name' => 'mail', 'id' => 'mail', 'type' => 'email', 'value' => set_value('mail')]); ?>
+                <?php if(isset($validation) && $validation->hasError('mail')): ?>
+                    <div class="text-danger"><?= $validation->getError('mail') ?></div>
+                <?php endif; ?>
+            </div>
+            
+            <div class="form-group mt-2">
+                <label for="pass">Contraseña</label>
+                <?php echo form_password(['name' => 'pass', 'id' => 'pass', 'type' => 'password']); ?>
+                <?php if(isset($validation) && $validation->hasError('pass')): ?>
+                    <div class="text-danger"><?= $validation->getError('pass') ?></div>
+                <?php endif; ?>
+            </div>
 
-            <label for="contra">Contraseña:</label>
-            <input type="password" name="contra" id="contra" required>
+            <div class="form-group mt-2">
+                <label for="repass">Repetir contraseña</label>
+                <?php echo form_password(['name' => 'repass', 'id' => 'repass', 'type' => 'password']); ?>
+                <?php if(isset($validation) && $validation->hasError('repass')): ?>
+                    <div class="text-danger"><?= $validation->getError('repass') ?></div>
+                <?php endif; ?>
+            </div>
 
-            <label for="rcontra">Repetir Contraseña:</label>
-            <input type="password" name="rcontra" id="rcontra" required>
+            <?php echo form_submit('Registrarme', 'Registrarme', "class='btn btn-success mt-3'") ?>
+        <?php echo form_close(); ?> 
 
-            <label for="codPostal">Código Postal:</label>
-            <input type="number" name="codPostal" id="codPostal" required>
-
-            <label for="calle">Calle:</label>
-            <input type="text" name="calle" id="calle" required>
-
-            <label for="numeroCalle">Número de calle:</label>
-            <input type="number" name="numeroCalle" id="numeroCalle" required>
-
-            <input type="submit" value="Registrarse">
-        </form>
+        <?php if(session()->getFlashdata('mensaje')) : ?> 
+            <div class= "alert alert-success">
+                <?= session()->getFlashdata('mensaje') ?>
+        </div>
+            <?php endif; ?>
     </div>
 </section>

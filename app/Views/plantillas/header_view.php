@@ -56,7 +56,7 @@
           <a class="nav-link " href=<?php echo base_url("inicio_sesion")?>><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
         </li>
         <li class="nav-item rounded-pill">
-          <a class="nav-link" href=<?php echo base_url("registro")?>><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
+          <a class="nav-link" href=<?php echo base_url("Registro")?>><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
         </li>
       </ul>
     </div>
