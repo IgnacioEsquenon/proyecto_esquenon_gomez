@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UsuariosModel;
 use App\Models\PerfilModel;
+use App\Models\MensajesModel;
 
 class UsuariosController extends BaseController
 {
@@ -68,6 +69,53 @@ class UsuariosController extends BaseController
             $data['validation'] = $validation;
             return view('plantillas/header_view', $data)
                 . view('contenido/registro_view.php')
+                . view('plantillas/footer_view.php');
+        }
+    }
+
+    public function add_mensaje()
+    {
+        $validation = \Config\Services::validation();
+        $request = \Config\Services::request();
+
+        $validation->setRules(
+            [
+                'motivo' => 'required',
+                'consulta' => 'required',
+            ],
+            [   // Errors
+                'motivo' => [
+                    'required' => 'El motivo es requerido'
+                ],
+                'consulta' => [
+                    'required' => 'Debe explicar su consulta'
+                ],
+                
+            ]
+        );
+
+        if ($validation->withRequest($request)->run()) {
+            $motivo = $this->request->getPost('motivo');
+    
+            if ($motivo === 'otro') {
+                $motivo = $this->request->getPost('otro');
+            }
+
+            $data = [
+                'usuario' => 12, //session()->get('id_usuario'),
+                'motivo' => $motivo, 
+                'consulta' => $this->request->getPost('consulta'),
+            ];
+
+            $consulta = new MensajesModel();
+            $consulta->insert($data);
+
+            return redirect()->to('contacto')->with('mensaje', 'Su consulta se envió correctamente!');
+        } else {
+            $data['titulo'] = 'Contacto';
+            $data['validation'] = $validation;
+            return view('plantillas/header_view', $data)
+                . view('contenido/contacto_view.php')
                 . view('plantillas/footer_view.php');
         }
     }

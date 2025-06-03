@@ -17,8 +17,8 @@ $routes->get('Registro', 'Home::registro');
 
 // $routes->post('consulta', 'UsuariosController::add_consulta');
 
-$routes->get('register', 'UsuariosController::registro');
 $routes->post('registro', 'UsuariosController::add_usuario');
+$routes->post('Contacto', 'UsuariosController::add_mensaje');
 
 //Rutas Administrador
 $routes->get('admin/listarProductos', 'AdminController::lista'); 

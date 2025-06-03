@@ -40,60 +40,60 @@
 
   <div>
     <h2 class="titulo-seccion">3. Formulario de Contacto</h2>
+    <?php helper('form'); ?>
+    <?php echo form_open('Contacto') ?>
+        <div class="form-group">
+            <label for="motivo">🎯 Motivo de contacto:</label>
+            <select id="motivo" name="motivo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="productos" <?php echo (isset($_POST['motivo']) && $_POST['motivo'] == 'productos' ? 'selected' : '') ?>>Consulta por productos</option>
+                <option value="soporte" <?php echo (isset($_POST['motivo']) && $_POST['motivo'] == 'soporte' ? 'selected' : '') ?>>Soporte técnico</option>
+                <option value="reclamo" <?php echo (isset($_POST['motivo']) && $_POST['motivo'] == 'reclamo' ? 'selected' : '') ?>>Reclamo o devolución</option>
+                <option value="facturacion" <?php echo (isset($_POST['motivo']) && $_POST['motivo'] == 'facturacion' ? 'selected' : '') ?>>Facturación</option>
+                <option value="otro" <?php echo (isset($_POST['motivo']) && $_POST['motivo'] == 'otro' ? 'selected' : '') ?>>Otro (especificar)</option>
+            </select>
+            <?php if(isset($validation) && $validation->hasError('motivo')): ?>
+                <div class="text-danger"><?= $validation->getError('motivo') ?></div>
+            <?php endif; ?>
+        </div>
+
+        <div class="form-group" id="otro-group" style="<?php echo (isset($_POST['motivo']) && $_POST['motivo'] == 'otro') ? '' : 'display: none;' ?>">
+            <label for="otro">📝 Otro (especificar):</label>
+            <input type="text" id="otro" name="otro" value="<?php echo isset($_POST['otro']) ? htmlspecialchars($_POST['otro']) : ''; ?>">
+        </div>
+        
+        <div class="form-group mt-2">
+            <label for="consulta">💬 Mensaje de Consulta</label>
+            <?php echo form_textarea([ 'name' => 'consulta',  'id' => 'consulta'], set_value('consulta')); ?>
+            <?php if(isset($validation) && $validation->hasError('consulta')): ?>
+                <div class="text-danger"><?= $validation->getError('consulta') ?></div>
+            <?php endif; ?>
+        </div>
+
+        <?php echo form_submit('Enviar Consulta', 'Enviar Consulta', "class='btn btn-success mt-3'") ?>
+    <?php echo form_close(); ?> 
+
+    <?php if(session()->getFlashdata('mensaje')) : ?> 
+        <div class="alert alert-success">
+            <?= session()->getFlashdata('mensaje') ?>
+        </div>
+    <?php endif; ?>
+</div>
+
+<script>
+document.getElementById('motivo').addEventListener('change', function() {
+    var otroGroup = document.getElementById('otro-group');
+    var otroInput = document.getElementById('otro');
     
-    <form method="post" action="<?php echo base_url('contacto/enviar') ?>">
-
-      <div class="form-group">
-        <label for="nombre">👤 Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required> 
-      </div>
-
-      <div class="form-group">
-        <label for="email">📧 Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div> 
-
-      <div class="form-group">
-        <label for="telefono">📞 Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono">
-      </div>
-
-      <div class="form-group">
-        <label for="motivo">🎯 Motivo de contacto:</label>
-        <select id="motivo" name="motivo" required>
-          <option value="">Seleccione una opción</option>
-          <option value="productos">Consulta por productos</option>
-          <option value="soporte">Soporte técnico</option>
-          <option value="reclamo">Reclamo o devolución</option>
-          <option value="facturacion">Facturación</option>
-          <option value="otro">Otro (especificar)</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="otro">📝 Otro (especificar):</label>
-        <input type="text" id="otro" name="otro">
-      </div>
-
-      <div class="form-group">
-        <label for="mensaje">💬 Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="archivo">📎 Adjuntar archivo (opcional):</label>
-        <input type="file" id="archivo" name="archivo">
-      </div>
-
-      <div class="form-group">
-        <label>
-          <input type="checkbox" id="privacidad" name="privacidad" required>
-          Acepto políticas de privacidad
-        </label>
-      </div>
-
-      <input type="submit" value="Enviar">
-    </form>
-  </div>
+    if (this.value === 'otro') {
+        otroGroup.style.display = 'block';
+        otroInput.setAttribute('required', 'required');
+    } else {
+        otroGroup.style.display = 'none';
+        otroInput.value = '';
+        otroInput.removeAttribute('required');
+    }
+});
+</script>
 
 </section> 
