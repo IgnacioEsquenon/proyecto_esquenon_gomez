@@ -40,16 +40,18 @@
 
   <div>
     <h2 class="titulo-seccion">3. Formulario de Contacto</h2>
-    <form method="post" action="#">
+    
+    <form method="post" action="<?php echo base_url('contacto/enviar') ?>">
+
       <div class="form-group">
         <label for="nombre">👤 Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre" required> 
       </div>
 
       <div class="form-group">
         <label for="email">📧 Email:</label>
         <input type="email" id="email" name="email" required>
-      </div>
+      </div> 
 
       <div class="form-group">
         <label for="telefono">📞 Teléfono:</label>
@@ -94,4 +96,4 @@
     </form>
   </div>
 
-</section>
+</section> 

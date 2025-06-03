@@ -1,0 +1,73 @@
+DEBUG - 2025-06-02 20:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 20:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 20:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 20:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-02 20:30:47 --> ErrorException: include(../../plantillas/headerAdmin_view.php): Failed to open stream: No such file or directory
+[Method: GET, Route: admin/ejemplo]
+in APPPATH\Views\backend\admin\ejemplo.php on line 3.
+ 1 APPPATH\Views\backend\admin\ejemplo.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(../../plantillas/headerAdmin_view.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Views\\backend\\admin\\ejemplo.php', 3)
+ 2 APPPATH\Views\backend\admin\ejemplo.php(3): include()
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Views\\backend\\admin\\ejemplo.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('backend/admin/ejemplo', [], true)
+ 6 APPPATH\Controllers\AdminController.php(11): view('backend/admin/ejemplo', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->ejemplo()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-02 20:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-02 20:34:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "plantillas/footer.php"
+[Method: GET, Route: admin/ejemplo]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('plantillas/footer.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('plantillas/footer', [], true)
+ 3 APPPATH\Controllers\AdminController.php(12): view('plantillas/footer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->ejemplo()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-02 20:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 20:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 20:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 20:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 21:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-02 21:03:09 --> Error: Class "App\Controllers\ProductoModel" not found
+[Method: GET, Route: admin/listarProductos]
+in APPPATH\Controllers\AdminController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-02 21:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-02 21:05:20 --> Error: Class "App\Models\ProductoModel" not found
+[Method: GET, Route: admin/listarProductos]
+in APPPATH\Controllers\AdminController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-02 21:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-02 21:06:47 --> ParseError: syntax error, unexpected token "protected", expecting end of file
+[Method: GET, Route: admin/listarProductos]
+in APPPATH\Models\ProductoModel.php on line 22.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Models\\ProductoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProductoModel')
+ 3 APPPATH\Controllers\AdminController.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProductoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-02 21:07:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 21:08:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 21:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-02 21:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

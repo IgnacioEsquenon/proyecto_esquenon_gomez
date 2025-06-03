@@ -19,3 +19,10 @@ $routes->get('Registro', 'Home::registro');
 
 $routes->get('register', 'UsuariosController::registro');
 $routes->post('registro', 'UsuariosController::add_usuario');
+
+//Rutas Administrador
+$routes->get('admin/listarProductos', 'AdminController::lista'); 
+$routes->get('altaProductos', 'AdminController::alta');
+
+//$routes->get('admin/modificar/(:num)', 'AdminController::modificar/$1');
+//$routes->get('admin/eliminar/(:num)', 'AdminController::eliminar/$1');
