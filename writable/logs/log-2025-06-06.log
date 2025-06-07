@@ -1,0 +1,295 @@
+DEBUG - 2025-06-06 00:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 00:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 00:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 20:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 20:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 20:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 20:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 20:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 20:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 20:59:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-06 21:01:10 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_esquenon_gomez\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyecto_esquenon_gomez\app\Controllers\AdminController.php(135): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+#9 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyecto_esquenon_gomez\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-06 21:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+[Method: POST, Route: guardar_producto]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminController.php(135): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 21:01:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Auriculares JBL\', \'assets/img/1749243670_02a3700c9bc0ee6fa615.webp\', \'1\', \'1\', \'58000\', \'JBL\', \'10\', \'Auriculares JBL - Color Negro Azabache. Importado desde EEUU\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Auriculares JBL\', \'assets/img/1749243670_02a3700c9bc0ee6fa615.webp\', \'1\', \'1\', \'58000\', \'JBL\', \'10\', \'Auriculares JBL - Color Negro Azabache. Importado desde EEUU\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AdminController.php(135): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 21:01:10 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Auriculares JBL\', \'assets/img/1749243670_02a3700c9bc0ee6fa615.webp\', \'1\', \'1\', \'58000\', \'JBL\', \'10\', \'Auriculares JBL - Color Negro Azabache. Importado desde EEUU\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Auriculares JBL\', \'assets/img/1749243670_02a3700c9bc0ee6fa615.webp\', \'1\', \'1\', \'58000\', \'JBL\', \'10\', \'Auriculares JBL - Color Negro Azabache. Importado desde EEUU\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Auriculares JBL\', \'assets/img/1749243670_02a3700c9bc0ee6fa615.webp\', \'1\', \'1\', \'58000\', \'JBL\', \'10\', \'Auriculares JBL - Color Negro Azabache. Importado desde EEUU\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminController.php(135): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-06 21:01:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:47:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-06 21:49:04 --> mysqli_sql_exception: Duplicate entry '1' for key 'categoria_id' in C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_esquenon_gomez\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyecto_esquenon_gomez\app\Controllers\AdminController.php(136): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+#9 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyecto_esquenon_gomez\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-06 21:49:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1' for key 'categoria_id'
+[Method: POST, Route: guardar_producto]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminController.php(136): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 21:49:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1' for key 'categoria_id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246544_376b66361a2cbedf248f.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246544_376b66361a2cbedf248f.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AdminController.php(136): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 21:49:04 --> [Caused by] mysqli_sql_exception: Duplicate entry '1' for key 'categoria_id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246544_376b66361a2cbedf248f.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246544_376b66361a2cbedf248f.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246544_376b66361a2cbedf248f.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminController.php(136): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-06-06 21:50:17 --> mysqli_sql_exception: Duplicate entry '1' for key 'categoria_id' in C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\proyecto_esquenon_gomez\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\proyecto_esquenon_gomez\app\Controllers\AdminController.php(136): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+#9 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\proyecto_esquenon_gomez\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\proyecto_esquenon_gomez\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\proyecto_esquenon_gomez\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-06-06 21:50:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1' for key 'categoria_id'
+[Method: POST, Route: guardar_producto]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminController.php(136): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 21:50:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1' for key 'categoria_id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246617_da56d977145d32016789.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246617_da56d977145d32016789.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AdminController.php(136): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 21:50:17 --> [Caused by] mysqli_sql_exception: Duplicate entry '1' for key 'categoria_id'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246617_da56d977145d32016789.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246617_da56d977145d32016789.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (\'Teclado Gaming NDVIA \', \'assets/img/1749246617_da56d977145d32016789.jpg\', \'1\', \'2\', \'20000\', \'NDVIA\', \'15\', \'Teclado Gaming NDVIA Gz, ideal para esas noches jugando al LOL hasta las 6 AM\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre_producto`, `imagen_producto`, `categoria_id`, `subcategoria_id`, `precio`, `marca`, `stock`, `descripcion`) VALUES (:nombre_producto:, :imagen_producto:, :categoria_id:, :subcategoria_id:, :precio:, :marca:, :stock:, :descripcion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminController.php(136): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->guardar_producto()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-06 21:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:52:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 21:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 22:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 22:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-06 23:06:56 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: GET, Route: eliminar/8]
+in SYSTEMPATH\BaseModel.php on line 1010.
+ 1 SYSTEMPATH\BaseModel.php(1010): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(863): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\AdminController.php(213): CodeIgniter\Model->update('8', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->eliminarproducto('8')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 23:11:25 --> ParseError: syntax error, unexpected single-quoted string "eliminado", expecting "]"
+[Method: GET, Route: listarProductos]
+in APPPATH\Models\ProductoModel.php on line 64.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Models\\ProductoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProductoModel')
+ 3 APPPATH\Controllers\AdminController.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProductoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 23:12:10 --> ParseError: syntax error, unexpected single-quoted string "eliminado", expecting "]"
+[Method: GET, Route: listarProductos]
+in APPPATH\Models\ProductoModel.php on line 64.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Models\\ProductoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProductoModel')
+ 3 APPPATH\Controllers\AdminController.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProductoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 23:12:33 --> ParseError: syntax error, unexpected single-quoted string "eliminado", expecting "]"
+[Method: GET, Route: listarProductos]
+in APPPATH\Models\ProductoModel.php on line 64.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Models\\ProductoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProductoModel')
+ 3 APPPATH\Controllers\AdminController.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProductoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 23:13:44 --> ParseError: syntax error, unexpected single-quoted string "eliminado", expecting "]"
+[Method: GET, Route: listarProductos]
+in APPPATH\Models\ProductoModel.php on line 65.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Models\\ProductoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProductoModel')
+ 3 APPPATH\Controllers\AdminController.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProductoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-06 23:14:19 --> ParseError: syntax error, unexpected single-quoted string "eliminado", expecting "]"
+[Method: GET, Route: listarProductos]
+in APPPATH\Models\ProductoModel.php on line 65.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\proyecto_esquenon_gomez\\app\\Models\\ProductoModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProductoModel')
+ 3 APPPATH\Controllers\AdminController.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProductoModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->lista()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(57): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-06 23:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:50:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-06 23:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

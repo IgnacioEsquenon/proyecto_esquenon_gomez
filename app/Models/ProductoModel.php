@@ -11,22 +11,24 @@ class ProductoModel extends Model
         'nombre_producto',
         'imagen_producto',
         'categoria_id',
+        'subcategoria_id',
         'precio',
         'marca',
         'stock',
         'descripcion',
-        'eliminado'
+        'eliminado',
     ];
 
     protected $validationRules = [
         'nombre_producto' => 'required|min_length[3]|max_length[100]',
-        'imagen_producto' => 'permit_empty|valid_url',
+        'imagen_producto' => 'permit_empty|max_length[255]',
         'categoria_id' => 'required|integer',
+        'subcategoria_id'   => 'required|integer', 
         'precio' => 'required|decimal',
         'marca' => 'permit_empty|max_length[50]',
         'stock' => 'required|integer',
         'descripcion' => 'permit_empty|max_length[500]',
-        'eliminado' => 'in_list[0,1]'
+        'eliminado' => 'in_list[NO,SI]'
     ];
 
     protected $validationMessages = [
@@ -41,6 +43,10 @@ class ProductoModel extends Model
         'categoria_id' => [
             'required' => 'La categoría es obligatoria.',
             'integer' => 'La categoría debe ser un número entero.'
+        ],
+        'subcategoria_id' => [ 
+            'required'    => 'La subcategoría es obligatoria.',
+            'integer'     => 'Debe ser un número entero.'
         ],
         'precio' => [
             'required' => 'El precio es obligatorio.',
@@ -57,8 +63,8 @@ class ProductoModel extends Model
             'max_length' => 'La descripción no puede exceder los 500 caracteres.'
         ],
         'eliminado' => [
-            'in_list' => 'El estado eliminado debe ser 0 o 1.'
+            'in_list' => 'El estado eliminado debe ser NO o SI.'
         ]
-    ];
+    ];    
 
 }

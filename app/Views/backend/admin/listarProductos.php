@@ -1,5 +1,10 @@
 <div class="container mt-5 text-light">
   <h1><?= $titulo ?></h1>
+  <div class="d-flex justify-content-end mt-2">
+    <a href="<?= base_url('verEliminados') ?>" class="btn btn-outline-light">
+      <i class="fa fa-eye-slash"></i> Ver eliminados
+    </a>
+  </div>
   <table class="table table-striped table-dark mt-4">
     <thead>
       <tr>
@@ -7,6 +12,7 @@
         <th>Nombre</th>
         <th>Imagen</th>
         <th>Categoría</th>
+        <th>Sub Categoría</th>
         <th>Precio</th>
         <th>Marca</th>
         <th>Stock</th>
@@ -19,17 +25,18 @@
         <tr>
           <td><?= $producto['id'] ?></td>
           <td><?= $producto['nombre_producto'] ?></td>
-          <td><img src="<?= base_url('uploads/' . $producto['imagen_producto']) ?>" width="60" /></td>
+          <td><img src="<?= base_url($producto['imagen_producto']) ?>" width="60" /></td>
           <td><?= $producto['categoria_id'] ?></td>
+          <td><?= $producto['subcategoria_id'] ?></td>
           <td>$<?= number_format($producto['precio'], 2) ?></td>
           <td><?= $producto['marca'] ?></td>
           <td><?= $producto['stock'] ?></td>
           <td><?= $producto['descripcion'] ?></td>
           <td>
-            <a href="<?= base_url('admin/modificar/' . $producto['id']) ?>" class="btn btn-warning btn-sm mb-1">
+            <a href="<?= base_url('modificar/' . $producto['id']) ?>" class="btn btn-warning btn-sm mb-1">
               <i class="fa fa-edit"></i> Modificar
             </a>
-            <a href="<?= base_url('admin/eliminar/' . $producto['id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">
+            <a href="<?= base_url('eliminar/' . $producto['id']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">
               <i class="fa fa-trash"></i> Quitar
             </a>
           </td>

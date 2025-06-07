@@ -21,8 +21,23 @@ $routes->post('registro', 'UsuariosController::add_usuario');
 $routes->post('Contacto', 'UsuariosController::add_mensaje');
 
 //Rutas Administrador
-$routes->get('admin/listarProductos', 'AdminController::lista'); 
+$routes->get('listarProductos', 'AdminController::lista'); 
 $routes->get('altaProductos', 'AdminController::alta');
+$routes->get('listadoProductos', 'AdminController::listaCompleta');
 
-//$routes->get('admin/modificar/(:num)', 'AdminController::modificar/$1');
-//$routes->get('admin/eliminar/(:num)', 'AdminController::eliminar/$1');
+
+//Ruta para guardar un producto
+$routes->post('guardar_producto', 'AdminController::guardar_producto');
+
+//Rutas para editar productos
+$routes->get('/modificar/(:num)', 'AdminController::mostrar_producto/$1');
+$routes->post('actualizar/(:num)', 'AdminController::modificar/$1'); 
+
+//Rutas para eliminar productos 
+$routes->get('eliminar/(:num)', 'AdminController::eliminarproducto/$1');
+$routes->get('verEliminados', 'AdminController::eliminados');
+$routes->get('activar/(:num)', 'AdminController::activarProducto/$1');
+
+
+
+
