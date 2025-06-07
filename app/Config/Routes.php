@@ -14,15 +14,17 @@ $routes->get('terminos_y_condiciones', 'Home::ter_y_cond');
 $routes->get('contacto', 'Home::contacto');
 $routes->get('inicio_sesion', 'Home::inicio_sesion');
 $routes->get('Registro', 'Home::registro');
+$routes->get('Perfil', 'Home::perfil', ['filter' => 'Auth']);
 
 // $routes->post('consulta', 'UsuariosController::add_consulta');
 
 $routes->post('registro', 'UsuariosController::add_usuario');
-$routes->post('Contacto', 'UsuariosController::add_mensaje');
-
+$routes->post('Contacto', 'UsuariosController::add_mensaje', ['filter' => 'Auth']);
+$routes->post('Ingreso', 'LoginController::auth');
+$routes->get('cerrar_sesion', 'LoginController::logout');
 //Rutas Administrador
-$routes->get('admin/listarProductos', 'AdminController::lista'); 
-$routes->get('altaProductos', 'AdminController::alta');
+$routes->get('admin/listarProductos', 'AdminController::lista', ['filter' => 'Auth']); 
+$routes->get('altaProductos', 'AdminController::alta', ['filter' => 'Auth']);
 
 //$routes->get('admin/modificar/(:num)', 'AdminController::modificar/$1');
-//$routes->get('admin/eliminar/(:num)', 'AdminController::eliminar/$1');
+//$routes->get('admin/eliminar/(:num)', 'AdminController::eliminar/$1')

@@ -1,9 +1,3 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-  session_start();
-}
-$titulo = $titulo ?? 'Admin';
-?>
 
 <!doctype html>
 <html lang="es">
@@ -33,7 +27,7 @@ $titulo = $titulo ?? 'Admin';
             <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/listado_productos') ?>"><i class="fa fa-list"></i> Lista de Productos</a></li>
           </ul>
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('logout.php') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('cerrar_sesion') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>
           </ul>
         </div>
       </div>

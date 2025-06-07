@@ -16,7 +16,7 @@ class AdminController extends BaseController
         $data['titulo'] = 'Listado de Productos';
 
     
-        echo view('plantillas/headerAdmin_view', $data);
+        echo view('plantillas/header_view', $data);
         echo view('backend/admin/listarProductos', $data);
         echo view('plantillas/footer_view', $data);
     } 
@@ -24,7 +24,7 @@ class AdminController extends BaseController
     public function alta(){
         $data['titulo'] = 'Alta de Productos';
 
-        echo view('plantillas/headerAdmin_view', $data);
+        echo view('plantillas/header_view', $data);
         echo view('backend/admin/altaProductos', $data);
         echo view('plantillas/footer_view', $data);
 

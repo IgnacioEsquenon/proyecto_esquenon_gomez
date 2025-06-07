@@ -102,7 +102,7 @@ class UsuariosController extends BaseController
             }
 
             $data = [
-                'usuario' => 12, //session()->get('id_usuario'),
+                'usuario' => session()->get('id'),
                 'motivo' => $motivo, 
                 'consulta' => $this->request->getPost('consulta'),
             ];
