@@ -32,8 +32,14 @@ class LoginController extends BaseController{
 
                 $session->set($ses_data);
                 
-                session()->setFlashdata('msg', 'Bienvenido!');
-                return redirect()->to('principal');
+                if(session()->get('perfil_id') === '1'){
+                    session()->setFlashdata('msg', 'Bienvenido!');
+                    return redirect()->to('principal');
+                }
+                else{
+                    return redirect()->to('listarProductos');
+                }
+                
             }else{
                 $session->setFlashdata('msg', 'Contraseña Incorrecta.');
                 return redirect()->to('inicio_sesion');

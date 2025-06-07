@@ -32,7 +32,7 @@ class AdminController extends BaseController
         $subcategoriasModel = new SubCategoriasModel();
         $data['subcategorias'] = $subcategoriasModel->findAll();
 
-        echo view('plantillas/headerAdmin_view', $data);
+        echo view('plantillas/header_view', $data);
         echo view('backend/admin/altaProductos', $data);
         echo view('plantillas/footer_view', $data);
 
@@ -45,7 +45,7 @@ class AdminController extends BaseController
         $productoModel = new ProductoModel();
         $data['productos'] = $productoModel->findAll();
 
-        echo view('plantillas/headerAdmin_view', $data);
+        echo view('plantillas/header_view', $data);
         echo view('backend/admin/listadoProductos', $data);
         echo view('plantillas/footer_view', $data);
     }
@@ -159,7 +159,7 @@ class AdminController extends BaseController
         $data['subcategorias'] = $subcategoriasModel->findAll();
 
         $data['titulo'] = 'Modificar Producto';
-        echo view('plantillas/headerAdmin_view', $data);
+        echo view('plantillas/header_view', $data);
         echo view('backend/admin/modificarProductos', $data);
         echo view('plantillas/footer_view', $data);
     }
@@ -222,7 +222,7 @@ class AdminController extends BaseController
         $data['productos'] = $productoModel->where('eliminado', 'SI')->findAll();
         $data['titulo'] = 'Productos Eliminados';
 
-        echo view('plantillas/headerAdmin_view', $data);
+        echo view('plantillas/header_view', $data);
         echo view('backend/admin/verEliminados', $data);
         echo view('plantillas/footer_view', $data);
     } 

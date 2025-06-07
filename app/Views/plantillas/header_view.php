@@ -19,11 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <?php if (session()->get('perfil_id') === '2' && session()->get('logged_in' === true)): ?>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/listar_productos') ?>"><i class="fa fa-list"></i> Listar productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('listarProductos') ?>"><i class="fa fa-list"></i> Gestionar productos</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= base_url('altaProductos') ?>"><i class="fa fa-plus"></i> Agregar producto</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/modificar_producto') ?>"><i class="fa fa-edit"></i> Modificar producto</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/eliminar_producto') ?>"><i class="fa fa-trash"></i> Eliminar producto</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/listado_productos') ?>"><i class="fa fa-list"></i> Lista de Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('verEliminados') ?>"><i class="fa fa-trash"></i> Productos Eliminados</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-list"></i> Lista de Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-shopping-cart"></i> Registro de Ventas</a></li>
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="<?= base_url('cerrar_sesion') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>
