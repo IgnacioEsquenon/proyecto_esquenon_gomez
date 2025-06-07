@@ -33,7 +33,7 @@ $titulo = $titulo ?? 'Admin';*/
             <li class="nav-item"><a class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-shopping-cart"></i> Registro de Ventas</a></li>
           </ul>
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('logout.php') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('cerrar_sesion') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>
           </ul>
         </div>
       </div>

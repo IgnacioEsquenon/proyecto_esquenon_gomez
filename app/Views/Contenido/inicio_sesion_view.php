@@ -3,15 +3,33 @@
 <section class="registro fade-scroll">
     <div>
         <h2 class="titulo-seccion">Inicio de Sesión</h2>
-        <form action="ruta_al_servidor" method="post">
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
+        <?php helper('form'); ?>
+        <?php echo form_open('Ingreso') ?>
+            <?php if (session('error')): ?>
+                <div class="alert alert-danger">
+                    <?= session('error') ?>
+                </div>
+            <?php endif; ?>        
 
-            <label for="contra">Contraseña:</label>
-            <input type="password" name="contra" id="contra" required>
+            <div class="form-group mt-2">
+                <label for="mail">Ingrese Email: </label>
+                <?php echo form_input(['name' => 'mail', 'id' => 'mail', 'type' => 'text', 'value' => set_value('mail')]); ?>
+            </div>
 
-            <input type="submit" value="Ingresar">
-        </form>
+            <div class="form-group mt-2">
+                <label for="pass">Ingrese Contraseña: </label>
+                <?php echo form_input(['name' => 'pass', 'id' => 'pass', 'type' => 'password', 'value' => set_value('pass')]); ?>
+            </div>
+
+            <?php echo form_submit('Ingresar', 'Ingresar', "class='btn btn-success mt-3'") ?>
+        <?php echo form_close(); ?>
+
+        <?php if(session()->getFlashdata('msg')) : ?> 
+            <div class= "alert alert-success">
+                <?= session()->getFlashdata('msg') ?>
+        </div>
+            <?php endif; ?>
+
     </div>
 </section>

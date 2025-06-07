@@ -51,4 +51,10 @@ class Home extends BaseController
         $data['titulo']="Registro";
         return view('plantillas/header_view.php', $data).view('Contenido/registro_view.php').view('plantillas/footer_view.php');
     }
+
+    public function perfil(): string
+    {
+        $data['titulo']="Perfil";
+        return view('plantillas/header_view.php', $data).view('Contenido/perfil_view.php').view('plantillas/footer_view.php');
+    }
 }

@@ -18,7 +18,7 @@ class AdminController extends BaseController
         $data['titulo'] = 'Gestión de Productos';
 
     
-        echo view('plantillas/headerAdmin_view', $data);
+        echo view('plantillas/header_view', $data);
         echo view('backend/admin/listarProductos', $data);
         echo view('plantillas/footer_view', $data);
     } 

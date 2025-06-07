@@ -10,8 +10,11 @@ class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
-        if(!session()->is_logged){
-            return redirect()->route('principal');
+        $session = session();
+        
+        if ($session->get('estado') !== true) {
+            // Redirigir al login con un mensaje de error
+            return redirect()->to('/inicio_sesion')->with('error', 'Debes iniciar sesión para acceder a esta página');
         }
     }
 

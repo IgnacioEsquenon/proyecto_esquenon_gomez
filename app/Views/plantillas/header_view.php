@@ -17,6 +17,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <?php if (session()->get('perfil_id') === '2' && session()->get('logged_in' === true)): ?>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/listar_productos') ?>"><i class="fa fa-list"></i> Listar productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('altaProductos') ?>"><i class="fa fa-plus"></i> Agregar producto</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/modificar_producto') ?>"><i class="fa fa-edit"></i> Modificar producto</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/eliminar_producto') ?>"><i class="fa fa-trash"></i> Eliminar producto</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('backend/admin/listado_productos') ?>"><i class="fa fa-list"></i> Lista de Productos</a></li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('cerrar_sesion') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>
+          </ul>
+        <?php else: ?>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-icons">
         <li class="nav-item rounded-pill">
           <a class="nav-link active" aria-current="page" href=<?php echo base_url("principal")?>> <i class="fa fa-home"></i><span class ="nav-text">Inicio</span></a>
@@ -52,13 +64,23 @@
         </li>
       </ul> 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
-        <li class="nav-item nav-user rounded-pill">
-          <a class="nav-link " href=<?php echo base_url("inicio_sesion")?>><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
-        </li>
-        <li class="nav-item rounded-pill">
-          <a class="nav-link" href=<?php echo base_url("Registro")?>><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
-        </li>
+        <?php if (session()->get('perfil_id') === '1' && session()->get('logged_in' === true)): ?>
+            <li class="nav-item nav-user rounded-pill">
+                <a class="nav-link" href="<?= base_url("Perfil") ?>"><i class="fas fa-user-circle me-2"></i> Perfil</a>
+            </li>
+            <li class="nav-item rounded-pill">
+                <a class="nav-link" href="<?= base_url("cerrar_sesion") ?>"><i class="fas fa-sign-out-alt me-2"></i> Cerrar Sesión</a>
+            </li>
+            <?php else: ?>
+              <li class="nav-item nav-user rounded-pill">
+                <a class="nav-link " href=<?php echo base_url("inicio_sesion")?>><i class="fa fa-user me-2"></i> Iniciar Sesion</span></a>
+              </li>
+              <li class="nav-item rounded-pill">
+                <a class="nav-link" href=<?php echo base_url("Registro")?>><i class="fa fa-user-plus me-2"></i> Registrarse</span></a>
+              </li>      
+        <?php endif; ?>
       </ul>
+      <?php endif; ?>
     </div>
   </div>
 </nav> 
