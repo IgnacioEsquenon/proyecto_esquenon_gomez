@@ -1,5 +1,10 @@
 
 <section class="carrusel fade-scroll">
+  <?php if (session('error')): ?>
+                <div class="alert alert-danger">
+                    <?= session('error') ?>
+                </div>
+            <?php endif; ?>
 <div id="carouselExampleControls" class="carousel slide justify-content-center" data-bs-ride="carousel">
 <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

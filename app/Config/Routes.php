@@ -23,27 +23,26 @@ $routes->post('Contacto', 'UsuariosController::add_mensaje', ['filter' => 'Auth'
 $routes->post('Ingreso', 'LoginController::auth');
 $routes->get('cerrar_sesion', 'LoginController::logout');
 //Rutas Administrador
-$routes->get('admin/listarProductos', 'AdminController::lista', ['filter' => 'Auth']); 
-$routes->get('altaProductos', 'AdminController::alta', ['filter' => 'Auth']);
+
 
 //$routes->get('admin/modificar/(:num)', 'AdminController::modificar/$1');
 //$routes->get('admin/eliminar/(:num)', 'AdminController::eliminar/$1')
-$routes->get('listarProductos', 'AdminController::lista'); 
-$routes->get('altaProductos', 'AdminController::alta');
-$routes->get('listadoProductos', 'AdminController::listaCompleta');
+$routes->get('listarProductos', 'AdminController::lista', ['filter' => 'AuthAdmin']); 
+$routes->get('altaProductos', 'AdminController::alta', ['filter' => 'AuthAdmin']);
+$routes->get('listadoProductos', 'AdminController::listaCompleta', ['filter' => 'AuthAdmin']);
 
 
 //Ruta para guardar un producto
-$routes->post('guardar_producto', 'AdminController::guardar_producto');
+$routes->post('guardar_producto', 'AdminController::guardar_producto', ['filter' => 'AuthAdmin']);
 
 //Rutas para editar productos
-$routes->get('/modificar/(:num)', 'AdminController::mostrar_producto/$1');
-$routes->post('actualizar/(:num)', 'AdminController::modificar/$1'); 
+$routes->get('/modificar/(:num)', 'AdminController::mostrar_producto/$1', ['filter' => 'AuthAdmin']);
+$routes->post('actualizar/(:num)', 'AdminController::modificar/$1', ['filter' => 'AuthAdmin']); 
 
 //Rutas para eliminar productos 
-$routes->get('eliminar/(:num)', 'AdminController::eliminarproducto/$1');
-$routes->get('verEliminados', 'AdminController::eliminados');
-$routes->get('activar/(:num)', 'AdminController::activarProducto/$1');
+$routes->get('eliminar/(:num)', 'AdminController::eliminarproducto/$1', ['filter' => 'AuthAdmin']);
+$routes->get('verEliminados', 'AdminController::eliminados', ['filter' => 'AuthAdmin']);
+$routes->get('activar/(:num)', 'AdminController::activarProducto/$1', ['filter' => 'AuthAdmin']);
 
 
 
