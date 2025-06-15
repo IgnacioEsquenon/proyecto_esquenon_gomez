@@ -45,7 +45,7 @@
           </a>
           <ul class="dropdown-menu">  
             <li> 
-              <a class="dropdown-item" href=<?php echo base_url("catalogo")?>><i class="fa fa-shopping-cart"></i> Catalogo Completo</a>
+              <a class="dropdown-item"class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-shopping-cart"></i> Catalogo Completo</a>
               </li>
             <p class="tit-dropmenu">Busca por Dispositivo</p>
             <li><a class="dropdown-item" href="#"><i class="fa fa-laptop"></i> PC</a></li>
@@ -68,6 +68,9 @@
       </ul> 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
         <?php if (session()->get('perfil_id') === '1' && session()->get('logged_in' === true)): ?>
+          <li class="nav-item nav-user rounded-pill">
+                <a class="nav-link" href="<?= base_url("ver_carrito") ?>"><i class="fa fa-shopping-cart me-2"></i>Carrito</a>
+            </li>
             <li class="nav-item nav-user rounded-pill">
                 <a class="nav-link" href="<?= base_url("Perfil") ?>"><i class="fas fa-user-circle me-2"></i> Perfil</a>
             </li>

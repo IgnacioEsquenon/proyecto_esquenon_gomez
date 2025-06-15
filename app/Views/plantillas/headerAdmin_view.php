@@ -1,9 +1,3 @@
-<?php
-/*if (session_status() === PHP_SESSION_NONE) {
-  session_start();
-}
-$titulo = $titulo ?? 'Admin';*/
-?>
 
 <!doctype html>
 <html lang="es">

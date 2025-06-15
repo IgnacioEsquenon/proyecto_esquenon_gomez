@@ -29,7 +29,7 @@ $routes->get('cerrar_sesion', 'LoginController::logout');
 //$routes->get('admin/eliminar/(:num)', 'AdminController::eliminar/$1')
 $routes->get('listarProductos', 'AdminController::lista', ['filter' => 'AuthAdmin']); 
 $routes->get('altaProductos', 'AdminController::alta', ['filter' => 'AuthAdmin']);
-$routes->get('listadoProductos', 'AdminController::listaCompleta', ['filter' => 'AuthAdmin']);
+$routes->get('listadoProductos', 'AdminController::listaCompleta');
 
 
 //Ruta para guardar un producto
@@ -44,6 +44,11 @@ $routes->get('eliminar/(:num)', 'AdminController::eliminarproducto/$1', ['filter
 $routes->get('verEliminados', 'AdminController::eliminados', ['filter' => 'AuthAdmin']);
 $routes->get('activar/(:num)', 'AdminController::activarProducto/$1', ['filter' => 'AuthAdmin']);
 
+//Ruta del carrito 
+$routes->get('ver_carrito', 'Carrito_controller::ver_carrito', ['filter' => 'Auth']); 
+$routes->post("add_cart", "Carrito_controller::agregar_carrito", ['filter' => 'Auth']);
+$routes->get("vaciar_carrito/(:any)", "Carrito_controller::vaciar_carrito/$1", ['filter' => 'Auth']);
+$routes->get("borrar_carrito", "Carrito_controller::borrar_carrito", ['filter' => 'Auth']); 
 
-
-
+//Ruta de Ventas
+$routes->get("registrar_venta", "VentasController::registrar_venta", ['filter' => 'Auth']);

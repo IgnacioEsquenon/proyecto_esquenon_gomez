@@ -3,7 +3,8 @@
 use App\Controllers\BaseController;
 use App\Models\ProductoModel;
 use App\Models\CategoriasModel;
-use App\Models\SubCategoriasModel;
+use App\Models\SubCategoriasModel; 
+
 
 class AdminController extends BaseController
 {
