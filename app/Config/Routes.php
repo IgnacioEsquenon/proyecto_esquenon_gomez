@@ -29,7 +29,7 @@ $routes->get('cerrar_sesion', 'LoginController::logout');
 //$routes->get('admin/eliminar/(:num)', 'AdminController::eliminar/$1')
 $routes->get('listarProductos', 'AdminController::lista', ['filter' => 'AuthAdmin']); 
 $routes->get('altaProductos', 'AdminController::alta', ['filter' => 'AuthAdmin']);
-$routes->get('listadoProductos', 'AdminController::listaCompleta');
+$routes->get('listadoProductos', 'CatalogoController::index');
 
 
 //Ruta para guardar un producto
