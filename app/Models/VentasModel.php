@@ -10,7 +10,7 @@ class VentasModel extends Model {
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_ventas', 'id_cliente', 'fecha_venta'];
+    protected $allowedFields = ['id_ventas', 'id_cliente', 'fecha_venta', "forma_pago", "forma_envio"];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true; 

@@ -31,8 +31,72 @@
         <?php endforeach; ?>
     </tbody>
     <h3>Total Compra: $<?php echo $total;  ?></h3>
-    <td><a href="<?php echo base_url("borrar_carrito"); ?>" class="btn btn-danger">Vaciar Carrito</a></td>
-    
-    <td><a href="<?php echo base_url("registrar_venta"); ?>" class="btn btn-success" role="button">Completar Compra</a></td>
-    <?php endif; ?>
+
+<form action="<?= base_url('registrar_venta') ?>" method="post">
+  <div>
+    <label>Forma de pago</label>
+    <div style="display:flex; gap:20px;">
+      <label style="cursor:pointer; text-align:center;">
+        <input type="radio" name="forma_pago" value="efectivo" required style="display:none;">
+        <img src="assets/img/efectivo.png" alt="Efectivo" style="width:80px; border:2px solid transparent; border-radius:8px;">
+        <div>Efectivo</div>
+      </label>
+      <label style="cursor:pointer; text-align:center;">
+        <input type="radio" name="forma_pago" value="tarjeta" required style="display:none;">
+        <img src="assets/img/tarjeta.png" alt="Tarjeta" style="width:80px; border:2px solid transparent; border-radius:8px;">
+        <div>Tarjeta</div>
+      </label>
+      <label style="cursor:pointer; text-align:center;">
+        <input type="radio" name="forma_pago" value="transferencia" required style="display:none;">
+        <img src="assets/img/billeteraV.png" alt="Transferencia" style="width:80px; border:2px solid transparent; border-radius:8px;">
+        <div>Transferencia</div>
+      </label>
+    </div>
+
+  <div class="form-group">
+    <label for="forma_envio">Forma de envío</label>
+    <select name="forma_envio" id="forma_envio" class="form-control" onchange="toggleEnvio()" required>
+      <option value="retiro">Retiro en local</option>
+      <option value="domicilio">Envío a domicilio</option>
+    </select>
+  </div>
+
+  <div id="datos_envio" style="display: none;">
+    <div class="form-group">
+      <label>Dirección</label>
+      <input type="text" name="direccion" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Localidad</label>
+      <input type="text" name="localidad" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Provincia</label>
+      <input type="text" name="provincia" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Código Postal</label>
+      <input type="text" name="cp" class="form-control">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success">Completar Compra</button>
+</form>
+<hr>
+<script>
+  function toggleEnvio() {
+    const tipo = document.getElementById("forma_envio").value;
+    document.getElementById("datos_envio").style.display = (tipo === "domicilio") ? "block" : "none";
+  }
+  const radios = document.querySelectorAll('input[name="forma_pago"]');
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      radios.forEach(r => {
+        r.nextElementSibling.style.borderColor = 'transparent';
+      });
+      radio.nextElementSibling.style.borderColor = '#007bff'; // color borde al seleccionado
+    });
+  });
+</script>
+<td><a href="<?php echo base_url("borrar_carrito"); ?>" class="btn btn-danger">Vaciar Carrito</a></td>
+<?php endif; ?>
     </table>

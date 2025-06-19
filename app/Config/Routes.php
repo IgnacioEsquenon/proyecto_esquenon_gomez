@@ -52,3 +52,7 @@ $routes->get("borrar_carrito", "Carrito_controller::borrar_carrito", ['filter' =
 
 //Ruta de Ventas
 $routes->get("registrar_venta", "VentasController::registrar_venta", ['filter' => 'Auth']);
+$routes->post("registrar_venta", "VentasController::registrar_venta", ['filter' => 'Auth']);
+$routes->get("ver_compra", "VentasController::ver_compra/$1", ['filter' => 'Auth']);
+$routes->get('ver_detalles/(:num)', 'VentasController::ver_detalles/$1', ['filter' => 'Auth']);
+

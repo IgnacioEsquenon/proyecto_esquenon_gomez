@@ -24,7 +24,7 @@
             <li class="nav-item"><a class="nav-link" href="<?= base_url('altaProductos') ?>"><i class="fa fa-plus"></i> Agregar producto</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= base_url('verEliminados') ?>"><i class="fa fa-trash"></i> Productos Eliminados</a></li>
             <li class="nav-item"><a class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-list"></i> Lista de Productos</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-shopping-cart"></i> Registro de Ventas</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= base_url('ver_compra/$id') ?>"><i class="fa fa-shopping-cart"></i> Registro de Ventas</a></li>
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="<?= base_url('cerrar_sesion') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>

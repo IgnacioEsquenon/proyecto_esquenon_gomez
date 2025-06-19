@@ -129,7 +129,7 @@ class AdminController extends BaseController
         'marca'           => $request->getPost('marca'),
         'stock'           => $request->getPost('stock'),
         'descripcion'     => $request->getPost('descripcion'),
-        //"eliminado"       => NO // Por defecto, no eliminado
+        "eliminado"       => "NO"
         ];
     
 
