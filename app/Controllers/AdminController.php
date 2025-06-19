@@ -129,7 +129,7 @@ class AdminController extends BaseController
         'marca'           => $request->getPost('marca'),
         'stock'           => $request->getPost('stock'),
         'descripcion'     => $request->getPost('descripcion'),
-        //"eliminado"       => NO // Por defecto, no eliminado
+        "eliminado"       => 'NO' // Por defecto, no eliminado
         ];
     
 
@@ -140,7 +140,16 @@ class AdminController extends BaseController
     } else {
             $data['titulo'] = 'Alta de Productos';
             $data['validation'] = $validation;
-            return redirect()->to('altaProductos');
+
+            $categoriasModel = new CategoriasModel();
+            $subcategoriasModel = new SubCategoriasModel();
+
+            $data['categorias'] = $categoriasModel->findAll();
+            $data['subcategorias'] = $subcategoriasModel->findAll();
+
+            echo view('plantillas/header_view', $data);
+            echo view('backend/admin/altaProductos', $data);
+            echo view('plantillas/footer_view', $data);
         }
 }
 

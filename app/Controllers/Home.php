@@ -19,7 +19,7 @@ class Home extends BaseController
     public function catalogo(): string
     {
         $data['titulo']="Catalogo";
-        return view('plantillas/header_view.php', $data).view('Contenido/catalogo_view.php').view('plantillas/footer_view.php');
+        return view('plantillas/header_view.php', $data).view('backend/admin/listadoProductos').view('plantillas/footer_view.php');
     } 
 
     public function comercializacion(): string

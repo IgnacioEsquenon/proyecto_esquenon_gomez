@@ -39,22 +39,8 @@
         <li class="nav-item rounded-pill">
           <a class="nav-link" href=<?php echo base_url("quienes_somos")?>> <i class="fa fa-address-card"></i><span class ="nav-text"> Nosotros </span></a>
         </li>
-        <li class="nav-item dropdown rounded-pill">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="fa fa-shopping-cart"></i><span class ="nav-text"> Catalogo</span>
-          </a>
-          <ul class="dropdown-menu">  
-            <li> 
-              <a class="dropdown-item"class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-shopping-cart"></i> Catalogo Completo</a>
-              </li>
-            <p class="tit-dropmenu">Busca por Dispositivo</p>
-            <li><a class="dropdown-item" href="#"><i class="fa fa-laptop"></i> PC</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fa fa-mobile-phone"></i> Celulares</a></li>
-            <li><hr class="dropdown-divider"></li> 
-            <p class="tit-dropmenu">Busca por Interes</p>
-            <li><a class="dropdown-item" href="#"> <i class="fa fa-briefcase"></i> Trabajo</a></li>
-            <li><a class="dropdown-item" href="#"> <i class="fa fa-gamepad"></i> Gaming</a></li>
-          </ul>
+        <li class="nav-item rounded-pill">
+          <a class="nav-link" href=<?php echo base_url("listadoProductos")?>><i class="fa fa-shopping-cart"></i> <span class ="nav-text">Catálogo </span></a>
         </li>
         <li class="nav-item rounded-pill">
           <a class="nav-link" href=<?php echo base_url("comercializacion")?>><i class="fa fa-credit-card-alt"></i> <span class ="nav-text">Comercialización </span></a>
