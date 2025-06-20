@@ -65,7 +65,7 @@ h1 {
 
 .card-img-top {
     height: 300px;
-    object-fit: cover;
+    object-fit:fill;
     border-bottom: 2px solid #2c74b3;
 }
 
