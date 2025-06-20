@@ -38,6 +38,7 @@
     <!-- Productos -->
     <div class="row">
         <?php foreach ($productos as $producto): ?> 
+            <?php if($producto["eliminado"]== "NO"): ?> 
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
                     <img src="<?= base_url($producto['imagen_producto']) ?>" class="card-img-top" alt="<?= $producto['nombre_producto'] ?>">
@@ -59,6 +60,7 @@
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
    <?php if ($pager->getPageCount() > 1): ?>

@@ -1,0 +1,25 @@
+.venta-card {
+    background: rgba(245, 245, 245, 0.85); /* Gris claro translúcido */
+    border: none;
+    border-radius: 15px;
+    backdrop-filter: blur(4px); /* Efecto de vidrio */
+}
+
+.venta-subtitulo {
+    color: #14532d; /* Verde oscuro */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.venta-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #14532d;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.venta-item:hover {
+    background-color: rgba(222, 247, 228, 0.8); /* Verde muy suave al pasar el mouse */
+}

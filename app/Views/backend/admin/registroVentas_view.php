@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="<?php echo base_url('assets/css/contacto_style.css')?>">
+
 <?php
 $session = session(); 
 if(empty($venta)) { ?>
@@ -7,14 +9,12 @@ if(empty($venta)) { ?>
 </div>
 <?php }else{ ?>
 
-<div class="row">
+<div class="container mt-5 text-light">
     <div class="container">
         <div class="col-xl-12 col-xs-10">
-            <h1 class="text-center">Registro de Ventas</h1>
+            <h1 class="text-center Titulo">Registro de Ventas</h1>
             <div class="table-responsive">
-      <h2 class="text-center"><?= $titulo ?></h2>
-
-<table class="table table-striped">
+<table class="table table-striped table-dark mt-4 table-bordered ">
     <thead>
         <tr>
             <th>ID Venta</th>
@@ -49,8 +49,8 @@ if(empty($venta)) { ?>
 </table>
 
 <!-- Mostrar total general abajo -->
-<div class="text-end">
-    <h4><strong>Total general de ventas: </strong>$<?= number_format($totalGeneral, 2) ?></h4>
+<div class="text-center mt-4">
+    <h4 class= "total-ventas">Total general de ventas: $<?= number_format($totalGeneral, 2) ?></h4>
 </div>
 
 <?php } ?>
