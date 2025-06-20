@@ -18,18 +18,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <?php if (session()->get('perfil_id') === '2' && session()->get('estado' === true)): ?>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('listarProductos') ?>"><i class="fa fa-list"></i> Gestionar productos</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('altaProductos') ?>"><i class="fa fa-plus"></i> Agregar producto</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('verEliminados') ?>"><i class="fa fa-trash"></i> Productos Eliminados</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-list"></i> Lista de Productos</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('ver_compra') ?>"><i class="fa fa-shopping-cart"></i> Registro de Ventas</a></li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-icons">
+            <li class="nav-item rounded-pill"><a class="nav-link" href="<?= base_url('listarProductos') ?>"><i class="fa fa-list"></i><span class ="nav-text"> Gestionar productos</span></a></li>
+            <li class="nav-item rounded-pill"><a class="nav-link" href="<?= base_url('altaProductos') ?>"><i class="fa fa-plus"></i><span class ="nav-text"> Agregar producto</span></a></li>
+            <li class="nav-item rounded-pill"><a class="nav-link" href="<?= base_url('verEliminados') ?>"><i class="fa fa-trash"></i><span class ="nav-text"> Productos Eliminados</span></a></li>
+            <li class="nav-item rounded-pill"><a class="nav-link" href="<?= base_url('listadoProductos') ?>"><i class="fa fa-list"></i><span class ="nav-text"> Lista de Productos</span></a></li>
+            <li class="nav-item rounded-pill"><a class="nav-link" href="<?= base_url('ver_compra') ?>"><i class="fa fa-shopping-cart"></i><span class ="nav-text"> Registro de Ventas</span></a></li>
           </ul>
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
             <li class="nav-item nav-user rounded-pill">
                 <a class="nav-link" href="<?= base_url("Perfil") ?>"><i class="fas fa-user-circle me-2"></i> <?php echo session()->get('nombre') ?></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('cerrar_sesion') ?>"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a></li>
+            <li class="nav-item rounded-pill"><a class="nav-link" href="<?= base_url('cerrar_sesion') ?>"><i class="fa fa-sign-out-alt"></i><span class ="nav-text"> Cerrar sesión</span></a></li>
           </ul>
         <?php else: ?>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-icons">
@@ -58,7 +58,7 @@
                 <a class="nav-link" href="<?= base_url("ver_carrito") ?>"><i class="fa fa-shopping-cart me-2"></i>Carrito</a>
             </li>
             <li class="nav-item nav-user rounded-pill">
-                <a class="nav-link" href="<?= base_url("Perfil") ?>"><i class="fas fa-user-circle me-2"></i> Perfil</a>
+                <a class="nav-link" href="<?= base_url("Perfil") ?>"><i class="fas fa-user-circle me-2"></i> <?php echo session()->get('nombre') ?></a>
             </li>
             <li class="nav-item rounded-pill">
                 <a class="nav-link" href="<?= base_url("cerrar_sesion") ?>"><i class="fas fa-sign-out-alt me-2"></i> Cerrar Sesión</a>

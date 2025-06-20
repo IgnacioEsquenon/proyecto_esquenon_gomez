@@ -15,8 +15,12 @@ class AdminController extends BaseController
          $productoModel = new ProductoModel();
 
         
-        $data['productos'] = $productoModel->where("eliminado", "NO")->findAll();
-        $data['titulo'] = 'Gestión de Productos';
+        $productoModel->select('productos.*, categorias.nombre as categoria_nombre, sub_categorias.nombre as subcategoria_nombre')
+              ->join('categorias', 'categorias.id = productos.categoria_id', 'left')
+              ->join('sub_categorias', 'sub_categorias.id = productos.subcategoria_id', 'left')
+              ->where('productos.eliminado', 'NO');
+
+        $data['productos'] = $productoModel->findAll(); 
 
     
         echo view('plantillas/header_view', $data);
@@ -249,5 +253,3 @@ class AdminController extends BaseController
 
 
 }
-
-//Comentario xd

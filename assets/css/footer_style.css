@@ -1,3 +1,7 @@
 .bg-body-tertiary.text-center{
     background-color: rgb(182, 178, 178) !important;
 }
+a {
+    color: inherit;           
+    text-decoration: none;    
+}

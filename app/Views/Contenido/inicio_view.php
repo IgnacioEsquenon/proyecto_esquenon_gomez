@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href=<?php echo base_url('assets/css/footer_style.css')?>>
 <section class="carrusel fade-scroll">
   <?php if (session('error')): ?>
                 <div class="alert alert-danger">
@@ -51,7 +51,7 @@
     <div class="card-body">
       <h5 class="card-title">Monitor Led Samsung LF27T350 27'' FullHD IPS 75hz Freesync Hdmi Color Negro</h5>
       <p class="card-text">Precio Especial: $340.000 ARS</p>
-      <button class="btn btn-success">Mas información</button>
+      <a href="listadoProductos" class="btn btn-success">Más información</a>
     </div>
   </div>
   <div class="card backgroundEffect">
@@ -59,7 +59,7 @@
     <div class="card-body">
       <h5 class="card-title">Combo Gaming Retroiluminado Usb Noganet NKB-403 Mouse Teclado Auricular y Pad Full Kit</h5>
       <p class="card-text">Precio Especial: $38.000 ARS</p>
-      <button class="btn btn-success">Mas información</button>
+      <a href="listadoProductos" class="btn btn-success">Más información</a>
     </div>
   </div>
   <div class="card backgroundEffect ">
@@ -67,7 +67,7 @@
     <div class="card-body">
       <h5 class="card-title">Control inalámbrico DualSense para PS5 Gray Camouflage</h5>
       <p class="card-text">Precio Especial: $147.000 ARS</p>
-      <button class="btn btn-success">Mas información</button>
+      <a href="listadoProductos" class="btn btn-success">Más información</a>
     </div>
   </div>
   <div class="card backgroundEffect">
@@ -75,7 +75,7 @@
     <div class="card-body">
       <h5 class="card-title">Smart Ring R2 Anillo Inteligente Android/IOS</h5>
       <p class="card-text">Precio Especial: $53.000 ARS</p>
-      <button class="btn btn-success">Mas información</button>
+      <a href="listadoProductos" class="btn btn-success">Más información</a>
     </div>
 </div>
 <div class="card backgroundEffect">
@@ -83,7 +83,7 @@
     <div class="card-body">
       <h5 class="card-title">Auriculares Vincha Inalámbricos Bluetooth Jbl Tune 520bt Negro </h5>
       <p class="card-text">Precio Especial: $60.000 ARS </p>
-      <button class="btn btn-success">Mas información</button>
+      <a href="listadoProductos" class="btn btn-success">Más información</a>
     </div>
 </section>
 
@@ -93,52 +93,37 @@
     <div class="row g-4">
 
       <div class="col-md-4">
+        <a href="listadoProductos?nombre=&categoria_id=&subcategoria_id=1">
         <div class="card text-center shadow-sm category-card h-100">
           <div class="card-body">
             <i class="fa fa-headphones fa-3x mb-3 text-primary"></i>
             <h5 class="card-title">Auriculares</h5>
             <p class="card-text">Calidad de sonido, comodidad y estilo.</p>
           </div>
+           </a>
         </div>
       </div>
 
       <div class="col-md-4">
+        <a href="listadoProductos?nombre=&categoria_id=&subcategoria_id=2">
         <div class="card text-center shadow-sm category-card h-100">
           <div class="card-body">
             <i class="fa fa-keyboard fa-3x mb-3 text-success"></i>
             <h5 class="card-title">Teclados</h5>
             <p class="card-text">Mecánicos, inalámbricos, para todos los gustos.</p>
           </div>
+           </a>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card text-center shadow-sm category-card h-100">
+        <a href="listadoProductos?nombre=&categoria_id=2&subcategoria_id="><div class="card text-center shadow-sm category-card h-100">
           <div class="card-body">
             <i class="fa fa-mobile-alt fa-3x mb-3 text-danger"></i>
             <h5 class="card-title">Celulares</h5>
             <p class="card-text">Personaliza y protege tu dispositivo movil con estilo y seguridad garantizados.</p>
           </div>
-        </div>
-      </div> 
-
-      <div class="col-md-4">
-        <div class="card text-center shadow-sm category-card h-100">
-          <div class="card-body">
-            <i class="fa fa-gamepad fa-3x mb-3 text-danger"></i>
-            <h5 class="card-title">Gaming</h5>
-            <p class="card-text">Juga y divertite como los profesionales.</p>
-          </div>
-        </div>
-      </div> 
-
-      <div class="col-md-4">
-        <div class="card text-center shadow-sm category-card h-100">
-          <div class="card-body">
-            <i class="fa fa-briefcase fa-3x mb-3 text-secondary"></i>
-            <h5 class="card-title">Trabajo</h5>
-            <p class="card-text">Encontra gadgets y accesorios para facilitar tu trabajo dia a dia.</p>
-          </div>
+        </a>
         </div>
       </div>
 
