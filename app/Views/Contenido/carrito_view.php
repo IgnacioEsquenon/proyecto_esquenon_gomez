@@ -1,13 +1,24 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/contacto_style.css')?>">
 <link rel="stylesheet" href="<?php echo base_url('assets/css/carrito_style.css')?>">
 <?php $cart = \Config\Services::cart(); ?>
-
+<section class="contacto fade-scroll">
 <h1 class="text-center Titulo">Carrito de Compras</h1>
 <div class="container my-3 mb-0"><a href="listadoProductos" class="btn btn-success mb-2">Hacer otra compra</a></div>
 
 
 <?php if ($cart->contents() == NULL): ?>
     <h2 class="text-center alert alert-danger">El Carrito está vacío</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
 <?php else: ?>
     
     <!-- TABLA DE PRODUCTOS -->
@@ -123,3 +134,4 @@
   });
 </script>
     </table>
+</section>
