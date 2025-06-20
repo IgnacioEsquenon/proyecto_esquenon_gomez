@@ -1,8 +1,9 @@
 
 <link rel="stylesheet" href="<?php echo base_url('assets/css/contacto_style.css')?>">
+<section class="contacto fade-scroll">
 <h1 class="Titulo"><?= $titulo ?></h1>
 
-<section>
+
 <div class="container mt-5 text-light">
      <?php helper('form'); ?>
     <?php echo form_open_multipart('guardar_producto')?>
@@ -86,5 +87,6 @@
         <?= session()->getFlashdata('mensaje') ?>
     </div>
     <?php endif; ?>
-</section>
+
 <hr>
+</section>

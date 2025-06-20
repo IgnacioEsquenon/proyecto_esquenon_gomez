@@ -1,5 +1,9 @@
+
+<link rel="stylesheet" href="<?php echo base_url('assets/css/contacto_style.css')?>">
+<section class="contacto fade-scroll">
+
 <div class="container mt-5 text-light">
-  <h1><?= $titulo ?></h1>
+  <h1 class="Titulo"><?= $titulo ?></h1>
 
   <div class="d-flex justify-content-end mt-2">
     <a href="<?= base_url('listarProductos') ?>" class="btn btn-outline-light">
@@ -46,4 +50,17 @@
       <?php endforeach; ?>
     </tbody>
   </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
 </div>
+
+</section>

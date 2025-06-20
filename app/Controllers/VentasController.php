@@ -151,7 +151,7 @@ class VentasController extends BaseController
         'envio' => $envio
     ];
 
-    echo view('plantillas/headerAdmin_view', $data);
+    echo view('plantillas/header_view', $data);
     echo view('backend/admin/detalle_venta_view', $data);
     echo view('plantillas/footer_view');
     }

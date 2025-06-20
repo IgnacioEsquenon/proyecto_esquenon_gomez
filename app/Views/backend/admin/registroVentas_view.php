@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/contacto_style.css')?>">
-
+<section class="contacto fade-scroll">
 <?php
 $session = session(); 
 if(empty($venta)) { ?>
@@ -60,3 +60,4 @@ if(empty($venta)) { ?>
         
 </div>
 
+        </section>

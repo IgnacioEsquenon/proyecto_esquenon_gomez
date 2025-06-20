@@ -47,7 +47,7 @@
                         <p class="card-text"><?= esc($producto['descripcion']) ?></p>
                         <p class="card-text"><strong>Categoría:</strong> <?= esc($producto['categoria_nombre']) ?></p>
                         <p class="card-text"><strong>Subcategoría:</strong> <?= esc($producto['subcategoria_nombre']) ?></p>
-
+                        <p class="card-text"><strong>Precio: $</strong><?= esc($producto['precio']) ?></p>
                         <?php if (session()->get('estado') === true): ?>
                             <?= form_open("add_cart") ?>
                                 <?= form_hidden("id", $producto["id"]) ?>

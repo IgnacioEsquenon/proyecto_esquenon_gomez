@@ -1,4 +1,7 @@
-<h1><?= $titulo ?></h1>
+<link rel="stylesheet" href="<?php echo base_url('assets/css/contacto_style.css')?>">
+<section class="contacto fade-scroll">
+
+<h1 class="Titulo"><?= $titulo ?></h1>
 
 <section>
 <div class="container mt-5 text-light">
@@ -84,4 +87,5 @@
         <?= session()->getFlashdata('mensaje') ?>
     </div>
     <?php endif; ?>
+</section>
 </section>
