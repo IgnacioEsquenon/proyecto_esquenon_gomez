@@ -82,15 +82,27 @@ class VentasController extends BaseController
         }
 
         if ($forma_envio === 'domicilio') {
+        $direccion = $request->getPost('direccion');
+        $localidad = $request->getPost('localidad');
+        $provincia = $request->getPost('provincia');
+        $cp = $request->getPost('cp');
+
+        if (empty($direccion) || empty($localidad) || empty($provincia) || empty($cp)) {
+        $session->setFlashdata('error', 'Debe completar todos los datos de envío a domicilio.');
+        return redirect()->route('ver_carrito')->withInput();
+        }
+
         $envio = [
             'venta_id' => $id_ventas,
-            'direccion' => $request->getPost('direccion'),
-            'localidad' => $request->getPost('localidad'),
-            'provincia' => $request->getPost('provincia'),
-            'cp' => $request->getPost('cp'),
+            'direccion' => $direccion,
+            'localidad' => $localidad,
+            'provincia' => $provincia,
+            'cp' => $cp,
         ];
+
         $envioModel->insert($envio);
     }
+
 
         //Vaciar el carrito
         $cartController->borrar_carrito();

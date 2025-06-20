@@ -1,4 +1,6 @@
-<h1><?= $titulo ?></h1>
+
+<link rel="stylesheet" href="<?php echo base_url('assets/css/contacto_style.css')?>">
+<h1 class="Titulo"><?= $titulo ?></h1>
 
 <section>
 <div class="container mt-5 text-light">
@@ -23,7 +25,7 @@
 
         <div class="mb-3">
             <label for="categoria_id" class="form-label">Categoría</label>
-            <select class="form-select" id="categoria_id" name="categoria_id" required>
+            <select class="form-group" id="categoria_id" name="categoria_id" required>
                 <option value="">Seleccione una opción</option>
                 <option value="1" <?php echo (isset($_POST['categoria_id']) && $_POST['categoria_id'] == '1' ? 'selected' : '') ?>>PC</option>
                <option value="2" <?php echo (isset($_POST['categoria_id']) && $_POST['categoria_id'] == '2' ? 'selected' : '') ?>>Celulares</option>
@@ -32,7 +34,7 @@
 
         <div class="mb-3">
             <label for="subcategoria_id" class="form-label">Sub-Categoría</label>
-            <select class="form-select" id="subcategoria_id" name="subcategoria_id" required>
+            <select class="form-group" id="subcategoria_id" name="subcategoria_id" required>
                 <option value="">Seleccione una opción</option>
                 <option value="1" <?php echo (isset($_POST['subcategoria_id']) && $_POST['subcategoria_id'] == '1' ? 'selected' : '') ?>>Auriculares</option>
                <option value="2" <?php echo (isset($_POST['subcategoria_id']) && $_POST['subcategoria_id'] == '2' ? 'selected' : '') ?>>Teclado</option>
@@ -70,7 +72,7 @@
 
         <div class="mb-3">
             <label for="descripcion" class="form-label">Descripción</label>
-            <?php echo form_textarea(['name' => 'descripcion', 'id' => 'descripcion', 'class' => 'form-control','value' =>set_value('descripcion')]); ?>
+            <?php echo form_textarea(['name' => 'descripcion', 'id' => 'descripcion', 'class' => 'form-textarea','value' =>set_value('descripcion')]); ?>
              <?php if(isset($validation) && $validation->hasError('descripcion')): ?>
                 <div class="text-danger"><?= $validation->getError('descripcion') ?></div>
             <?php endif; ?>
@@ -85,3 +87,4 @@
     </div>
     <?php endif; ?>
 </section>
+<hr>
