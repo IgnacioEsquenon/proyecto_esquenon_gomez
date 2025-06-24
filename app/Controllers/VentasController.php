@@ -76,9 +76,14 @@ class VentasController extends BaseController
 
             //Actualizar el stock del producto
             $producto = $productoModel->find($item['id']);
-            $productoModel->update($item['id'], [
-                'stock' => $producto['stock'] - $item['qty']
-            ]);
+            
+            $resultado = (int)$producto['stock'] - (int)$item['qty']; 
+            $data = [
+                'stock' => $resultado
+            ];
+            
+            $productoModel->update($item['id'], $data); 
+            
         }
 
         if ($forma_envio === 'domicilio') {
