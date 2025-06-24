@@ -5,6 +5,12 @@
 <h1 class="text-center Titulo">Carrito de Compras</h1>
 <div class="container my-3 mb-0"><a href="listadoProductos" class="btn btn-success mb-2">Hacer otra compra</a></div>
 
+<?php if(session()->getFlashdata('mensaje')) : ?> 
+            <div class= "alert alert-success">
+                <?= session()->getFlashdata('mensaje') ?>
+        </div>
+            <?php endif; ?>
+
 
 <?php if ($cart->contents() == NULL): ?>
     <h2 class="text-center alert alert-danger">El Carrito está vacío</h2>

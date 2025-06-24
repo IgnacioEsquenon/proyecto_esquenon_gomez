@@ -106,7 +106,7 @@ class VentasController extends BaseController
 
         //Vaciar el carrito
         $cartController->borrar_carrito();
-        $session->setFlashdata('success', 'Venta registrada correctamente.');
+        $session->setFlashdata('mensaje', 'Venta registrada correctamente.');
         return redirect()->to('ver_carrito');
     }
 

@@ -41,7 +41,7 @@ $routes->post('actualizar/(:num)', 'AdminController::modificar/$1', ['filter' =>
 
 //Rutas para eliminar productos 
 $routes->get('eliminar/(:num)', 'AdminController::eliminarproducto/$1', ['filter' => 'AuthAdmin']);
-$routes->get('verEliminados', 'AdminController::eliminados', ['filter' => 'AuthAdmin']);
+$routes->get('verEliminados', 'CatalogoController::eliminados', ['filter' => 'AuthAdmin']);
 $routes->get('activar/(:num)', 'AdminController::activarProducto/$1', ['filter' => 'AuthAdmin']);
 
 //Ruta del carrito 

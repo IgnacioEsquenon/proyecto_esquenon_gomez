@@ -32,8 +32,8 @@
           <td><?= $producto['id'] ?></td>
           <td><?= $producto['nombre_producto'] ?></td>
           <td><img src="<?= base_url($producto['imagen_producto']) ?>" width="60" /></td>
-          <td><?= $producto['categoria_id'] ?></td>
-          <td><?= $producto['subcategoria_id'] ?></td>
+          <td><?= esc($producto['categoria_nombre']) ?></td>
+          <td><?= esc($producto['subcategoria_nombre'])?></td>
           <td>$<?= number_format($producto['precio'], 2) ?></td>
           <td><?= $producto['marca'] ?></td>
           <td><?= $producto['stock'] ?></td>

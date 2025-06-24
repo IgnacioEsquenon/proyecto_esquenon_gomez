@@ -1,5 +1,11 @@
 <link rel="stylesheet" href=<?php echo base_url('assets/css/catalogo_style.css')?>>
 
+<?php if(session()->getFlashdata('mensaje')) : ?> 
+        <div class="alert alert-success">
+        <?= session()->getFlashdata('mensaje') ?>
+    </div>
+    <?php endif; ?>
+
 <div class="container mt-5">
     <h1 class="mb-4"><?= $titulo ?></h1>
 

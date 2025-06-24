@@ -82,11 +82,7 @@
         <?php echo form_submit('Guardar Producto', 'Guardar Producto', "class='btn btn-success mt-3'") ?>
         <?php echo form_close(); ?> 
 
-        <?php if(session()->getFlashdata('mensaje')) : ?> 
-        <div class="alert alert-success">
-        <?= session()->getFlashdata('mensaje') ?>
-    </div>
-    <?php endif; ?>
+        
 
 <hr>
 </section>

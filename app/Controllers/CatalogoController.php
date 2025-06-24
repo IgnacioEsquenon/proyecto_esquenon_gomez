@@ -62,4 +62,29 @@ class CatalogoController extends BaseController
          . view('backend/admin/listadoProductos', $data)
          . view('plantillas/footer_view', $data);
 }
+
+     public function eliminados(){
+        $productoModel = new ProductoModel();
+        $categoriaModel = new CategoriasModel();
+         $subCategoriaModel = new SubCategoriasModel();
+        $data['productos'] = $productoModel->where('eliminado', 'SI')->findAll();
+        
+
+        $productoModel->select('productos.*, categorias.nombre as categoria_nombre, sub_categorias.nombre as subcategoria_nombre')
+                  ->join('categorias', 'categorias.id = productos.categoria_id', 'left')
+                  ->join('sub_categorias', 'sub_categorias.id = productos.subcategoria_id', 'left')
+                  ->where('productos.eliminado', 0);
+        $productos = $productoModel;
+
+        $data = [
+        "titulo" => 'Productos Eliminados',
+        'productos' => $productos->where('eliminado', 'SI')->findAll(),
+        'categorias' => $categoriaModel->findAll(),
+        'subcategorias' => $subCategoriaModel->findAll(),
+    ]; 
+
+        echo view('plantillas/header_view', $data);
+        echo view('backend/admin/verEliminados', $data);
+        echo view('plantillas/footer_view', $data);
+    }
 }

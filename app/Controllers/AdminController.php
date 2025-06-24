@@ -139,8 +139,9 @@ class AdminController extends BaseController
 
         $nuevoProducto = new ProductoModel();
         $nuevoProducto->insert($data); 
-   
-    return redirect()->to('listadoProductos')->with('mensaje', 'Producto guardado correctamente');
+        
+        session()->setFlashdata('mensaje', 'Producto agregado correctamente');
+    return redirect()->to('listadoProductos');
     } else {
             $data['titulo'] = 'Alta de Productos';
             $data['validation'] = $validation;
@@ -218,7 +219,8 @@ class AdminController extends BaseController
         $data['eliminado'] = $producto['eliminado']; // mantiene el estado "SI" o "NO"
 
         $productoModel->update($id, $data);
-        return redirect()->to('listarProductos')->with('mensaje', 'Producto modificado correctamente');
+        session()->setFlashdata('mensaje', 'Producto modificado correctamente');
+        return redirect()->to('listarProductos');
 
     }
 
@@ -230,16 +232,7 @@ class AdminController extends BaseController
         $productoModel->update($id, $data);
         return $this->response->redirect(site_url('listarProductos'));
     } 
-
-    public function eliminados(){
-        $productoModel = new ProductoModel();
-        $data['productos'] = $productoModel->where('eliminado', 'SI')->findAll();
-        $data['titulo'] = 'Productos Eliminados';
-
-        echo view('plantillas/header_view', $data);
-        echo view('backend/admin/verEliminados', $data);
-        echo view('plantillas/footer_view', $data);
-    } 
+ 
 
     public function activarProducto($id){
         $productoModel = new ProductoModel();
